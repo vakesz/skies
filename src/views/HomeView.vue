@@ -12,4 +12,9 @@
     </div>
   </div>
 </div>
+  <!-- content
+  <div class="grid place-content-center h-screen bg-base-200">content</div>
+  <div class="grid place-content-center h-screen bg-base-100">content</div>
+  <div class="grid place-content-center h-screen bg-base-200">content</div>
+ /content -->
 </template>
