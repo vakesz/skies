@@ -13,7 +13,7 @@
           </label>
         </div>
         <div class="flex-1">
-          <img class="h-10" src="../assets/logo.png" alt="logo" />
+          <img class="h-10" src="../assets/altlogo.png" alt="logo" />
         </div>
         <div class="flex-none">
           <button class="btn btn-ghost btn-circle">
