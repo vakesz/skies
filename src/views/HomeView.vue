@@ -6,11 +6,7 @@ import Breadcrumb from '../components/BreadCrumb.vue'
 
 <template>
   <div class="flex flex-col items-center justify-center mx-auto max-w-[1200px] w-full px-4 gap-6 my-6">
-    <!---<Breadcrumb />--->
-    <PostHero />
-    <PostHero />
-    <PostHero />
-    <PostHero />
-    <PostHero />
+    <Breadcrumb />
+    <PostHero v-for="index in 5" />
   </div>
 </template>

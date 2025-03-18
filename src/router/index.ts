@@ -1,25 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
 import UserSettings from '@/views/UserSettings.vue'
-import ErrorPage from '@/views/ErrorPage.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'HomeView',
       component: HomeView,
     },
     {
       path: '/settings',
-      name: 'settings',
+      name: 'UserSettings',
       component: UserSettings,
     },
     {
       path: "/:pathMatch(.*)*",
-      name: '404',
-      component: ErrorPage,
+      name: 'NotFound',
+      component: NotFound,
     }
   ],
 })
