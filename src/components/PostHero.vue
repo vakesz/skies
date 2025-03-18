@@ -19,7 +19,7 @@
         src="https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?cs=srgb&dl=pexels-joshsorenson-976866.jpg&fm=jpg"
         alt="Event" class="object-cover h-full w-full" />
       <!-- Tags on Top -->
-      <div class="absolute bottom-4 left-4 flex space-x-3">
+      <div class="absolute top-4 left-4 md:bottom-4 md:top-auto flex space-x-3">
         <span class="bg-gray-700 text-white bg-opacity-50 shadow-md px-3 py-1 rounded-full">#Adventure</span>
         <span class="bg-gray-700 text-white bg-opacity-50 shadow-md px-3 py-1 rounded-full">#Fun</span>
       </div>
