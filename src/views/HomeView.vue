@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PostHero from '../components/PostHero.vue'
-import Breadcrumb from '../components/Breadcrumb.vue'
+import Breadcrumb from '../components/BreadCrumb.vue'
 </script>
 
 
