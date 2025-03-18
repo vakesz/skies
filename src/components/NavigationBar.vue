@@ -1,6 +1,6 @@
 <template>
   <nav :class="[
-    'flex p-3 max-w-[800] sticky bg-base-300 shadow-md px-6 transition-all duration-100 z-10',
+    'flex p-3 sticky bg-base-300 shadow-md px-6 transition-all duration-100 z-10',
     isScrolled ? 'top-0 w-full rounded-md p-2' : 'top-3 rounded-full'
   ]">
     <div class="flex-none">
