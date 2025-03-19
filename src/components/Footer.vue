@@ -31,6 +31,6 @@
 <script setup>
 import FacebookIcon from '@/components/icons/FacebookIcon.vue';
 import TwitterIcon from '@/components/icons/TwitterIcon.vue';
-import YouTubeIcon from './icons/YouTubeIcon.vue';
-import LinkedInIcon from './icons/LinkedInIcon.vue';
+import YouTubeIcon from '@/components/icons/YouTubeIcon.vue';
+import LinkedInIcon from '@/components/icons/LinkedInIcon.vue';
 </script>
