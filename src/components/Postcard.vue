@@ -21,7 +21,7 @@
         </div>
 
         <p class="text-gray-600 mt-3">
-          Join us for an unforgettable experience filled with fun and adventure.
+          Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure.
         </p>
       </div>
 
