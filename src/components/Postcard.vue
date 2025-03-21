@@ -28,7 +28,7 @@
         <p class="text-gray-600 mt-3">
           {{ truncatedDescription }}
         </p>
-        <span v-if="showReadMore" class="text-black font-semibold cursor-pointer mt-2 block">Read More</span>
+        <span v-if="showReadMore" @click="goToPost" class="text-black font-semibold cursor-pointer mt-2 block">Read More</span>
       </div>
     </div>
     
@@ -86,6 +86,10 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const goToPost = () => router.push('/post');
 
 const users = [
   { img: "https://randomuser.me/api/portraits/men/32.jpg" },

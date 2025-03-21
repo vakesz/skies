@@ -5,7 +5,7 @@
     </button>
 
     <div class="flex-1 flex justify-center">
-      <img class="h-10 transition-transform duration-300 hover:scale-105" src="../assets/altlogo.png" alt="Company Logo" />
+      <img class="h-10 transition-transform duration-300 hover:scale-105" @click="goHome" src="../assets/altlogo.png" alt="Company Logo" />
     </div>
 
     <button class="btn btn-ghost btn-circle" aria-label="Search">
@@ -28,6 +28,10 @@ import MenuIcon from '@/components/icons/MenuIcon.vue';
 import SearchIcon from '@/components/icons/SearchIcon.vue';
 import UserIcon from '@/components/icons/UserIcon.vue';
 import MoreIcon from '@/components/icons/MoreIcon.vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const goHome = () => router.push('/');
 
 const isScrolled = ref(false);
 
