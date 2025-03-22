@@ -35,9 +35,9 @@
           <img class="w-8 h-8 rounded-full" :src="profilePicture" alt="Profile Picture" />
         </div>
         <hr class="my-2" />
-        <button class="w-full text-left p-2 hover:bg-gray-100 rounded">Profile</button>
-        <button class="w-full text-left p-2 hover:bg-gray-100 rounded">Settings</button>
-        <button class="w-full text-left p-2 hover:bg-gray-100 rounded">Logout</button>
+        <a href="/user"><button class="w-full text-left p-2 hover:bg-gray-100 rounded">Profile</button></a>
+        <a href="/settings"><button class="w-full text-left p-2 hover:bg-gray-100 rounded">Settings</button></a>
+        <a href="/logout"><button class="w-full text-left p-2 hover:bg-gray-100 rounded">Logout</button></a>
       </div>
     </div>
 
