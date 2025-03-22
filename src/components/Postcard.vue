@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white/70  backdrop-blur-lg rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full max-w-[1200px] md:flex-row">
+  <div class="bg-white  backdrop-blur-lg rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full max-w-6xl md:flex-row">
     <!-- Left Section -->
     <div class="p-8 flex flex-col justify-between w-full md:w-2/3 order-2 md:order-none">
       <!-- Header -->

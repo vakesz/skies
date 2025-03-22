@@ -1,12 +1,12 @@
 <template>
    <div class="container mx-auto px-4 py-8 flex flex-col items-center">
       <!-- Main Event Card -->
-      <div class="bg-neutral-100 backdrop-blur-lg rounded-lg overflow-hidden shadow-md hover:shadow-xl max-w-[1200px] w-full">
+      <div class="bg-white backdrop-blur-lg rounded-lg overflow-hidden shadow-md hover:shadow-xl max-w-6xl w-full">
          <!-- Event Header -->
          <div class="relative">
             <img :src="eventImage" :alt="eventTitle" class="w-full h-64 object-cover" />
             <div
-               class="absolute inset-0 bg-gradient-to-t from-neutral-100 via-transparent to-transparent flex items-center justify-center">
+               class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent flex items-center justify-center">
                <h2 class="text-2xl text-center font-semibold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)] p-4">{{ eventTitle }}</h2>
             </div>
          </div>
@@ -15,6 +15,12 @@
             <!-- Event Info -->
             <div class="prose prose-gray">
                <div v-html="eventDescription"></div>
+            </div>
+
+            <!-- Written By and Last Edited -->
+            <div class="mt-4 text-gray-500 text-sm">
+               <p><strong>Written by:</strong> {{ writtenBy }}</p>
+               <p><strong>Last edited:</strong> {{ lastEdited }}</p>
             </div>
 
             <!-- Time and Location -->
@@ -47,13 +53,13 @@
       </div>
 
       <!-- Comments Section -->
-      <div class="max-w-[1200px] w-full mt-8">
+      <div class="max-w-6xl w-full mt-8">
          <h4 class="font-semibold text-gray-800 mb-4">Comments</h4>
          
          <!-- Comment Cards -->
          <div class="space-y-4">
             <div v-for="(comment, index) in comments" :key="index" 
-                 class="bg-neutral-100 rounded-lg shadow p-4 transition-shadow hover:shadow-md">
+                 class="bg-white rounded-lg shadow p-4 transition-shadow hover:shadow-md">
                <div class="flex items-start space-x-4">
                   <img :src="commenters[comment.user].img" 
                        :alt="commenters[comment.user].name"
@@ -86,7 +92,7 @@
          </div>
 
          <!-- Comment Form -->
-         <form @submit.prevent="addComment" class="mt-6 bg-neutral-100 rounded-lg shadow p-4 transition-shadow hover:shadow-md">
+         <form @submit.prevent="addComment" class="mt-6 bg-white rounded-lg shadow transition-shadow hover:shadow-md">
             <div class="relative">
                <!-- User Image -->
                <img 
@@ -149,6 +155,8 @@ export default {
          eventDate: "March 25, 2025",
          eventTime: "10:00 AM - 12:00 PM",
          eventPlace: "New York, NY",
+         writtenBy: "John Doe",
+         lastEdited: "March 20, 2025",
          attendees: [
             { img: "https://randomuser.me/api/portraits/men/32.jpg" },
             { img: "https://randomuser.me/api/portraits/women/44.jpg" },

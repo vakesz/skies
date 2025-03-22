@@ -1,12 +1,10 @@
 <template>
-   <div class="container mx-auto px-4 py-8 flex flex-col items-center">
-      <!-- Card Container -->
-      <div class="bg-white p-8 backdrop-blur-lg rounded-lg shadow-2xl max-w-[800px] w-full">
-         <!-- Header Section -->
-         <div class="relative text-center mb-8">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Settings</h2>
-            <p class="text-gray-600 mt-2">Customize your preferences below</p>
-         </div>
+   <div class="flex items-center justify-center py-12">
+     <div class="bg-white rounded-lg shadow-xl max-w-6xl w-full p-8">
+       <div class="mb-8 text-center">
+         <h2 class="text-3xl font-extrabold text-gray-900">Settings</h2>
+         <p class="mt-2 text-sm text-gray-600">Customize your preferences below</p>
+       </div>
 
          <!-- Settings Form -->
          <form @submit.prevent="saveSettings" class="space-y-8">

@@ -4,7 +4,9 @@ TODO List:
 The items on the list are in no particular order!
 
 - [] Ambassador image layout on post if organized by that team
-- [] 1200px navbar
+- [x] 1200px navbar
+- [] Collapsible attendes in detailed view
+- [] Collapsible comments in detailed view
 - [] drawer for menu
 - [] synchronize data across pages
 - [] add login/logout
@@ -22,6 +24,7 @@ The items on the list are in no particular order!
 - [] add backend connection
 - [] add new colleague info bar
 - [] add today birthdays info bar
+- Maybe even see more in settings?
 
 ## Recommended IDE Setup
 

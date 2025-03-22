@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center py-12">
-    <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full p-8">
+  <div class="flex items-center justify-center py-12">
+    <div class="bg-white rounded-lg shadow-xl max-w-6xl w-full p-8">
       <div class="mb-8 text-center">
         <h2 class="text-3xl font-extrabold text-gray-900">Account Details</h2>
         <p class="mt-2 text-sm text-gray-600">Manage your personal and business information below</p>

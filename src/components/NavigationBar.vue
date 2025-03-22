@@ -101,8 +101,8 @@ onUnmounted(() => {
 });
 
 const navClass = computed(() => [
-  'flex w-full sticky bg-neutral-200 backdrop-blur-md shadow-md p-2 px-4 transition-all duration-100 z-10 items-center',
-  isScrolled.value ? 'top-0 rounded-none' : 'top-3 rounded-full',
+  'flex mx-auto sticky bg-neutral-200 backdrop-blur-md shadow-md p-2 px-4 transition-all duration-100 z-10 items-center max-w-[1200px]',
+  isScrolled.value ? 'top-0 rounded-b-2xl' : 'top-3 rounded-full',
 ]);
 
 // User data
