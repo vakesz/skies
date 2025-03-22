@@ -36,7 +36,7 @@ const goHome = () => router.push('/');
 const isScrolled = ref(false);
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 100;
+  isScrolled.value = window.scrollY > 50;
 };
 
 onMounted(() => {
