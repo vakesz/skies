@@ -5,8 +5,8 @@ The items on the list are in no particular order!
 
 - [ ] Ambassador image layout on post if organized by that team
 - [x] 1200px navbar
-- [ ] Collapsible attendes in detailed view
-- [ ] Collapsible comments in detailed view
+- [x] Collapsible attendes in detailed view
+- [x] Collapsible comments in detailed view
 - [ ] drawer for menu
 - [ ] synchronize data across pages
 - [ ] add login/logout
