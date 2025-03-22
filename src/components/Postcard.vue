@@ -1,12 +1,13 @@
 <template>
-  <div class="bg-white/70 backdrop-blur-lg rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col w-full max-w-[1200px] md:flex-row">
+  <div class="bg-white/70  backdrop-blur-lg rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full max-w-[1200px] md:flex-row">
     <!-- Left Section -->
     <div class="p-8 flex flex-col justify-between w-full md:w-2/3 order-2 md:order-none">
       <!-- Header -->
       <div>
         <div class="flex justify-between items-center">
           <h2 class="text-2xl font-bold text-gray-900 cursor-pointer" @click="goToPost">Exciting Event</h2>
-          <button @click="showModal = true" class="btn btn-outline px-2 text-xs md:text-sm rounded-lg">
+          <button @click="showModal = true" 
+                  class="px-4 py-2 border border-gray-300 text-xs md:text-sm rounded-lg hover:bg-gray-100 transition-colors">
             Sign Up
           </button>
         </div>

@@ -1,12 +1,12 @@
 <template>
    <div class="container mx-auto px-4 py-8 flex flex-col items-center">
       <!-- Main Event Card -->
-      <div class="bg-white/70 backdrop-blur-lg rounded-lg overflow-hidden shadow-md hover:shadow-xl max-w-[1200px] w-full">
+      <div class="bg-neutral-100 backdrop-blur-lg rounded-lg overflow-hidden shadow-md hover:shadow-xl max-w-[1200px] w-full">
          <!-- Event Header -->
          <div class="relative">
             <img :src="eventImage" :alt="eventTitle" class="w-full h-64 object-cover" />
             <div
-               class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent flex items-center justify-center">
+               class="absolute inset-0 bg-gradient-to-t from-neutral-100 via-transparent to-transparent flex items-center justify-center">
                <h2 class="text-2xl font-semibold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)] p-4">{{ eventTitle }}</h2>
             </div>
          </div>
@@ -19,8 +19,15 @@
 
             <!-- Time and Location -->
             <div class="mt-4 space-y-1 text-gray-500 text-sm">
-               <p>📅 {{ eventTime }}</p>
-               <p>📍 {{ eventPlace }}</p>
+               <p class="flex items-center gap-2">
+                  <CalendarIcon class="w-4 h-4" /> {{ eventDate }}
+               </p>
+               <p class="flex items-center gap-2">
+                  <ClockIcon class="w-4 h-4" /> {{ eventTime }}
+               </p>
+               <p class="flex items-center gap-2">
+                  <LocationIcon class="w-4 h-4" /> {{ eventPlace }}
+               </p>
             </div>
 
             <!-- Attendees -->
@@ -40,13 +47,13 @@
       </div>
 
       <!-- Comments Section -->
-      <div class="overflow-hidden max-w-[1200px] w-full mt-8">
+      <div class="max-w-[1200px] w-full mt-8">
          <h4 class="font-semibold text-gray-800 mb-4">Comments</h4>
          
          <!-- Comment Cards -->
          <div class="space-y-4">
             <div v-for="(comment, index) in comments" :key="index" 
-                 class="bg-white rounded-lg shadow p-4 transition-shadow hover:shadow-md">
+                 class="bg-neutral-100 rounded-lg shadow p-4 transition-shadow hover:shadow-md">
                <div class="flex items-start space-x-4">
                   <img :src="commenters[comment.user].img" 
                        :alt="commenters[comment.user].name"
@@ -58,17 +65,19 @@
                      </div>
                      <p class="mt-2 text-gray-700">{{ comment.text }}</p>
                      <div class="mt-3 flex items-center space-x-2">
-                        <button @click="toggleLike(index)" 
-                                class="flex items-center space-x-1 text-sm text-gray-500 hover:text-blue-500 transition-colors"
-                                :class="{ 'text-blue-500': comment.isLiked }">
+                        <!-- Updated Like Button -->
+                        <button 
+                           @click="toggleLike(index)" 
+                           class="flex items-center space-x-1 text-sm text-gray-500 hover:text-black hover:font-semibold transition-colors"
+                           :class="{ 'font-semibold': comment.isLiked }">
                            <svg xmlns="http://www.w3.org/2000/svg" 
-                                class="h-5 w-5" 
-                                :class="{ 'fill-blue-500': comment.isLiked, 'fill-gray-500': !comment.isLiked }"
+                                class="h-4 w-4" 
+                                :class="{ 'fill-black': comment.isLiked, 'fill-gray-500': !comment.isLiked }"
                                 viewBox="0 0 20 20" 
                                 fill="currentColor">
                               <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
                            </svg>
-                           <span>{{ comment.likes }} {{ comment.likes === 1 ? 'Like' : 'Likes' }}</span>
+                           <span class="leading-none">{{ comment.likes }} {{ comment.likes === 1 ? 'Like' : 'Likes' }}</span>
                         </button>
                      </div>
                   </div>
@@ -77,7 +86,7 @@
          </div>
 
          <!-- Comment Form -->
-         <form @submit.prevent="addComment" class="mt-6 bg-white rounded-lg shadow p-4 transition-shadow hover:shadow-md">
+         <form @submit.prevent="addComment" class="mt-6 bg-neutral-100 rounded-lg shadow p-4 transition-shadow hover:shadow-md">
             <div class="flex items-center space-x-3 mb-2">
                <img :src="currentUser.img" 
                     :alt="currentUser.name"
@@ -87,12 +96,12 @@
             <div class="relative">
                <textarea 
                   v-model="newComment" 
-                  class="w-full border rounded-lg p-3 pr-12 resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[60px]" 
+                  class="w-full border bg-white/60 rounded-lg p-3 pr-12 resize-none focus:ring-2 focus:ring-black focus:outline-none focus:border-transparent min-h-[60px]" 
                   placeholder="Write a comment...">
                </textarea>
                <button 
                   type="submit" 
-                  class="absolute bottom-3 right-3 text-blue-500 hover:text-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  class="absolute bottom-3 right-3 text-neutral-600 hover:text-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   :disabled="!newComment.trim()">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -105,8 +114,17 @@
 </template>
 
 <script>
+import CalendarIcon from '@/components/icons/CalendarIcon.vue';
+import LocationIcon from '@/components/icons/LocationIcon.vue';
+import ClockIcon from '@/components/icons/ClockIcon.vue';
+
 export default {
    name: 'EventCard',
+   components: {
+      CalendarIcon,
+      LocationIcon,
+      ClockIcon
+   },
    data() {
       return {
          eventTitle: "New UI: A Glimpse Into the Future 2025",
@@ -126,7 +144,8 @@ export default {
           She has worked at numerous software companies in the last 20 years and has experienced the development cycle at all stages in \
           various roles throughout that time. Helen loves to learn new tools and technologies, create content about that journey and \
           share it with the community.",
-         eventTime: "March 25, 2025 | 9:00 AM - 6:00 PM",
+         eventDate: "March 25, 2025",
+         eventTime: "10:00 AM - 12:00 PM",
          eventPlace: "New York, NY",
          attendees: [
             { img: "https://randomuser.me/api/portraits/men/32.jpg" },
