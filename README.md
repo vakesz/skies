@@ -1,6 +1,27 @@
 # skies
 
-This template should help get you started developing with Vue 3 in Vite.
+TODO List:
+The items on the list are in no particular order!
+
+- [] Ambassador image layout on post if organized by that team
+- [] 1200px navbar
+- [] drawer for menu
+- [] synchronize data across pages
+- [] add login/logout
+- [] add themes
+- [] add floating new post button
+- [] add post editor
+- [] add search
+- [] add useful links somewhere
+- [] add signatures copies somewhere
+- [] add coworker view
+- [] add a calendar view
+- [] add forum
+- [] add help pages (markdown - rtf editor - etc)
+- [] add localization support
+- [] add backend connection
+- [] add new colleague info bar
+- [] add today birthdays info bar
 
 ## Recommended IDE Setup
 
