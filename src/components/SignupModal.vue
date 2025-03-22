@@ -1,5 +1,9 @@
 <template>
-  <div v-if="show" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div 
+    v-if="show" 
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
+    @click.self="$emit('close')"
+  >
     <div class="bg-white rounded-lg p-6 max-w-md w-full">
       <h3 class="text-xl font-bold mb-4">Sign Up for Event</h3>
       

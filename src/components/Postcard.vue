@@ -41,13 +41,17 @@
   </div>
 
   <!-- Modal -->
-  <SignupModal v-if="showModal" 
-               :show="showModal"
-               :date="eventDate"
-               :location="eventLocation"
-               :users="users"
-               @close="showModal = false"
-               @confirm="confirmSignup" />
+  <div v-if="showModal" 
+       class="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+       @click.self="showModal = false">
+    <SignupModal 
+      :show="showModal"
+      :date="eventDate"
+      :location="eventLocation"
+      :users="users"
+      @close="showModal = false"
+      @confirm="confirmSignup" />
+  </div>
 </template>
 
 <script setup>

@@ -7,7 +7,7 @@
             <img :src="eventImage" :alt="eventTitle" class="w-full h-64 object-cover" />
             <div
                class="absolute inset-0 bg-gradient-to-t from-neutral-100 via-transparent to-transparent flex items-center justify-center">
-               <h2 class="text-2xl font-semibold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)] p-4">{{ eventTitle }}</h2>
+               <h2 class="text-2xl text-center font-semibold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)] p-4">{{ eventTitle }}</h2>
             </div>
          </div>
 
@@ -87,18 +87,20 @@
 
          <!-- Comment Form -->
          <form @submit.prevent="addComment" class="mt-6 bg-neutral-100 rounded-lg shadow p-4 transition-shadow hover:shadow-md">
-            <div class="flex items-center space-x-3 mb-2">
-               <img :src="currentUser.img" 
-                    :alt="currentUser.name"
-                    class="w-8 h-8 rounded-full" />
-               <span class="font-medium text-gray-700">{{ currentUser.name }}</span>
-            </div>
             <div class="relative">
+               <!-- User Image -->
+               <img 
+                  :src="currentUser.img" 
+                  :alt="currentUser.name" 
+                  class="absolute top-3 left-3 w-8 h-8 rounded-full border border-gray-300" 
+               />
+               <!-- Textarea -->
                <textarea 
                   v-model="newComment" 
-                  class="w-full border bg-white/60 rounded-lg p-3 pr-12 resize-none focus:ring-2 focus:ring-black focus:outline-none focus:border-transparent min-h-[60px]" 
+                  class="w-full border bg-white/60 rounded-lg p-3 pl-14 pr-12 resize-y focus:ring-2 focus:ring-black focus:outline-none focus:border-transparent min-h-[60px]" 
                   placeholder="Write a comment...">
                </textarea>
+               <!-- Submit Button -->
                <button 
                   type="submit" 
                   class="absolute bottom-3 right-3 text-neutral-600 hover:text-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -128,7 +130,7 @@ export default {
    data() {
       return {
          eventTitle: "New UI: A Glimpse Into the Future 2025",
-         eventImage: "https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?cs=srgb&dl=pexels-joshsorenson-976866.jpg&fm=jpg",
+         eventImage: "https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg",
          eventDescription: "JetBrains first released our IDEs in January 2001. Since then, many incremental changes have\
           occurred to the UI we all know and love. Recently, weve made the most significant leap in UI design since launch.\
           New UI will improve the user experience of all products, and we know youll love its fresh and new perspective on productivity.<br>\

@@ -9,16 +9,27 @@
         alt="Company Logo" />
     </div>
 
-    <button class="p-2 rounded-full" aria-label="Search">
-      <SearchIcon class="hover:scale-110" />
-    </button>
+    <!-- Search Icon with Dropdown -->
+    <div class="relative" ref="searchDropdown">
+      <button class="p-2 rounded-full" aria-label="Search" @click="toggleSearchDropdown">
+        <SearchIcon class="hover:scale-110" />
+      </button>
+      <div v-if="isSearchDropdownOpen" class="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-20">
+        <input
+          ref="searchInput"
+          type="text"
+          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-black"
+          placeholder="Search..."
+        />
+      </div>
+    </div>
 
     <!-- User Icon with Dropdown -->
-    <div class="relative">
-      <button class="p-2 rounded-full" aria-label="User Menu" @click="toggleDropdown">
+    <div class="relative" ref="userDropdown">
+      <button class="p-2 rounded-full" aria-label="User Menu" @click="toggleUserDropdown">
         <UserIcon class="hover:scale-110" />
       </button>
-      <div v-if="isDropdownOpen" class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4 z-20">
+      <div v-if="isUserDropdownOpen" class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4 z-20">
         <div class="flex items-center">
           <p class="text-sm font-semibold flex-1">Welcome, <br />{{ firstName }} {{ lastName }}!</p>
           <img class="w-8 h-8 rounded-full" :src="profilePicture" alt="Profile Picture" />
@@ -30,14 +41,15 @@
       </div>
     </div>
 
+    <!-- More Options Icon 
     <button class="p-2 rounded-full" aria-label="More Options">
       <MoreIcon class="hover:scale-110" />
-    </button>
+    </button>-->
   </nav>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue';
+import { ref, onMounted, onUnmounted, computed, nextTick } from 'vue';
 import MenuIcon from '@/components/icons/MenuIcon.vue';
 import SearchIcon from '@/components/icons/SearchIcon.vue';
 import UserIcon from '@/components/icons/UserIcon.vue';
@@ -48,22 +60,44 @@ const router = useRouter();
 const goHome = () => router.push('/');
 
 const isScrolled = ref(false);
-const isDropdownOpen = ref(false);
+const isUserDropdownOpen = ref(false);
+const isSearchDropdownOpen = ref(false);
+const userDropdown = ref(null);
+const searchDropdown = ref(null);
+const searchInput = ref(null);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
 };
 
-const toggleDropdown = () => {
-  isDropdownOpen.value = !isDropdownOpen.value;
+const toggleUserDropdown = () => {
+  isUserDropdownOpen.value = !isUserDropdownOpen.value;
+};
+
+const toggleSearchDropdown = () => {
+  isSearchDropdownOpen.value = !isSearchDropdownOpen.value;
+  if (isSearchDropdownOpen.value) {
+    nextTick(() => searchInput.value?.focus());
+  }
+};
+
+const handleClickOutside = (event) => {
+  if (userDropdown.value && !userDropdown.value.contains(event.target)) {
+    isUserDropdownOpen.value = false;
+  }
+  if (searchDropdown.value && !searchDropdown.value.contains(event.target)) {
+    isSearchDropdownOpen.value = false;
+  }
 };
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+  document.addEventListener('click', handleClickOutside);
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+  document.removeEventListener('click', handleClickOutside);
 });
 
 const navClass = computed(() => [
