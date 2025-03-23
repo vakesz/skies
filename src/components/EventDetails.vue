@@ -12,7 +12,7 @@
      <div class="p-6">
        <!-- Event Info -->
        <div class="prose prose-gray">
-          <div v-html="eventDescription"></div>
+          <div style="white-space: pre-line;">{{ eventDescription }}</div>
        </div>
        <!-- Written By and Last Edited -->
        <div class="mt-4 text-gray-500 text-sm">
