@@ -59,7 +59,7 @@ import CalendarIcon from '@/components/icons/CalendarIcon.vue';
 import ClockIcon from '@/components/icons/ClockIcon.vue';
 import LocationIcon from '@/components/icons/LocationIcon.vue';
 
-defineProps({
+const props = defineProps({
   show: Boolean,
   date: String,
   time: {
@@ -73,5 +73,5 @@ defineProps({
   }
 });
 
-defineEmits(['close', 'confirm']);
+const emit = defineEmits(['close', 'confirm']);
 </script>

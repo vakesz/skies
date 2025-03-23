@@ -17,7 +17,6 @@
                      <option value="10">10</option>
                      <option value="25">25</option>
                      <option value="50">50</option>
-                     <option value="100">100</option>
                   </select>
 
                   <label class="block font-medium text-gray-700">Language Settings</label>
@@ -45,6 +44,7 @@
                   <Checkbox v-model="settings.showAddToCalendar" label="Show Add to Calendar Button" />
                   <Checkbox v-model="settings.hideCreateEvent" label="Hide Create Event Button" />
                   <Checkbox v-model="settings.enableEditor" label="Enable Markdown or Rich Text Editor" />
+                  <Checkbox v-model="settings.enableCompactMode" label="Enable Compact Mode" />
                </div>
             </div>
 
@@ -65,8 +65,6 @@
                      <option value="location">Your Location</option>
                      <option value="none">None</option>
                   </select>
-                  <Checkbox v-model="settings.disableNewColleagueInfo" label="Disable New Colleague Info" />
-                  <Checkbox v-model="settings.disableBirthdayNotifications" label="Disable Birthday Notifications" />
                   <Checkbox v-model="settings.enableDesktopNotifications" label="Enable Desktop Notifications" />
                   <Checkbox v-model="settings.enableEmailNotifications" label="Enable Email Notifications" />
                   <Checkbox v-model="settings.disableHelpTips" label="Disable Help Tips" />
@@ -86,10 +84,10 @@
                </div>
             </div>
             <div class="mt-8 text-center">
-            <button type="submit" class="w-full md:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">
-               Save Settings
-            </button>
-         </div>
+               <button type="submit" class="w-full md:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">
+                  Save Settings
+               </button>
+            </div>
          </form>
       </div>
    </div>
@@ -99,6 +97,24 @@
 import VueCookies from 'vue-cookies';
 import Checkbox from '@/components/icons/Checkbox.vue';
 
+const defaultSettings = {
+   postsOnHomePage: '10',
+   language: 'en',
+   theme: 'light',
+   openComments: true,
+   openAttendeeList: false,
+   showAddToCalendar: false,
+   hideCreateEvent: false,
+   enableEditor: false,
+   enableCompactMode: false,
+   newColleagueNotifications: 'all',
+   birthdayNotifications: 'all',
+   enableDesktopNotifications: false,
+   enableEmailNotifications: false,
+   calendarSettings: '7',
+   disableHelpTips: false,
+};
+
 export default {
    name: 'SettingsView',
    components: {
@@ -106,31 +122,24 @@ export default {
    },
    data() {
       return {
-         settings: {
-            postsOnHomePage: VueCookies.get('postsOnHomePage') || '10',
-            language: VueCookies.get('language') || 'en',
-            theme: VueCookies.get('theme') || 'light',
-            openComments: VueCookies.get('openComments') === 'true',
-            openAttendeeList: VueCookies.get('openAttendeeList') === 'true',
-            showAddToCalendar: VueCookies.get('showAddToCalendar') === 'true',
-            hideCreateEvent: VueCookies.get('hideCreateEvent') === 'true',
-            enableEditor: VueCookies.get('enableEditor') === 'true',
-            disableNewColleagueInfo: VueCookies.get('disableNewColleagueInfo') === 'true',
-            newColleagueNotifications: VueCookies.get('newColleagueNotifications') || 'all',
-            birthdayNotifications: VueCookies.get('birthdayNotifications') || 'all',
-            disableBirthdayNotifications: VueCookies.get('disableBirthdayNotifications') === 'true',
-            enableDesktopNotifications: VueCookies.get('enableDesktopNotifications') === 'true',
-            enableEmailNotifications: VueCookies.get('enableEmailNotifications') === 'true',
-            calendarSettings: VueCookies.get('calendarSettings') || '7',
-            disableHelpTips: VueCookies.get('disableHelpTips') === 'true',
-         },
+         settings: { ...defaultSettings },
       };
+   },
+   created() {
+      Object.keys(this.settings).forEach(key => {
+         const cookieVal = VueCookies.get(key);
+         if (cookieVal !== undefined) {
+            this.settings[key] = typeof defaultSettings[key] === 'boolean' 
+               ? cookieVal === 'true' 
+               : cookieVal;
+         }
+      });
    },
    methods: {
       saveSettings() {
-         for (const [key, value] of Object.entries(this.settings)) {
-            VueCookies.set(key, value, '7d'); // Save each setting in cookies for 7 days
-         }
+         Object.entries(this.settings).forEach(([key, value]) => {
+            VueCookies.set(key, value, '7d');
+         });
          alert('Settings saved!');
       },
    },
