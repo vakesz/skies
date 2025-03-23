@@ -1,5 +1,5 @@
 <template>
-   <div class="bg-white backdrop-blur-lg rounded-lg overflow-hidden shadow-md hover:shadow-xl max-w-6xl w-full">
+   <div class="bg-white backdrop-blur-lg rounded-2xl overflow-hidden shadow-md hover:shadow-xl max-w-6xl w-full">
      <!-- Event Header -->
      <div class="relative">
        <img :src="eventImage" :alt="eventTitle" class="w-full h-64 object-cover" />

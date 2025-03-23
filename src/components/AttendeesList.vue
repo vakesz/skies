@@ -10,7 +10,7 @@
       />
     </div>
     <!-- Attendees List -->
-    <div class="bg-white rounded-lg shadow-md p-6 mt-4">
+    <div class="bg-white rounded-2xl shadow-md p-6 mt-4">
       <div class="space-y-4">
         <div v-if="showAttendees" v-for="(user, index) in attendees" :key="user.userid" class="flex items-center gap-4">
           <img :src="user.profileImage" :alt="`${user.firstName} ${user.lastName}`" class="w-10 h-10 rounded-full" />

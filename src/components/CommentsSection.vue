@@ -14,7 +14,7 @@
       <!-- Comments List -->
       <div class="space-y-4">
          <div v-for="(comment, index) in comments" :key="index"
-              class="bg-white rounded-lg shadow p-4 transition-shadow hover:shadow-md">
+              class="bg-white rounded-2xl shadow p-4 transition-shadow hover:shadow-md">
             <div class="flex items-start space-x-4">
                <img :src="comment.profileImage" 
                     :alt="`${comment.firstName} ${comment.lastName}`"
@@ -51,14 +51,14 @@
          </div>
       </div>
       <!-- Comment Form -->
-      <form @submit.prevent="addComment" class="mt-6 bg-white rounded-lg shadow transition-shadow hover:shadow-md">
+      <form @submit.prevent="addComment" class="mt-6 bg-white rounded-2xl shadow transition-shadow hover:shadow-md">
          <div class="relative">
             <!-- User Image -->
             <img :src="currentUser.profileImage" :alt="`${currentUser.firstName} ${currentUser.lastName}`"
                class="absolute top-3 left-3 w-8 h-8 rounded-full border border-gray-300" />
             <!-- Textarea -->
             <textarea v-model="newComment"
-               class="w-full border bg-white/60 rounded-lg p-3 pl-14 pr-12 resize-y focus:ring-2 focus:ring-black focus:outline-none focus:border-transparent min-h-[60px]"
+               class="w-full border bg-white/80 rounded-2xl p-3 pl-14 pr-12 resize-y focus:ring-2 focus:ring-black focus:outline-none focus:border-transparent min-h-[60px]"
                placeholder="Write a comment...">
             </textarea>
             <!-- Submit Button -->

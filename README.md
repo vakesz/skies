@@ -7,23 +7,33 @@ The items on the list are in no particular order!
 - [x] 1200px navbar
 - [x] Collapsible attendes in detailed view
 - [x] Collapsible comments in detailed view
+- [ ] add user info modal
+- [ ] add coworker view
 - [ ] drawer for menu
 - [ ] synchronize data across pages
 - [ ] add login/logout
-- [ ] add themes
-- [ ] add floating new post button
-- [ ] add post editor
+- [ ] add floating new post button with few possible states (controllable from settings)
+     - facebook style small textarea on top which when clicked expands
+     - Floating action button with a pen in it?
+     - show in navbar
+     - disabled all
+- [ ] add new colleague info bar, today birthdays info bar
+   - show a bell in navbar
+   - show an alert flyer with a cake or sth that can be dismissed, and will not show up again that day.
+   - disabled
 - [ ] add search
 - [ ] add useful links somewhere
 - [ ] add signatures copies somewhere
-- [ ] add coworker view
 - [ ] add a calendar view
-- [ ] add forum
 - [ ] add help pages (markdown - rtf editor - etc)
 - [ ] add localization support
+- [ ] add themes(dark/light)
+- [ ] if using microsoft login, show open chat on user modal which opens teams chat with them
+- [ ] add iCal support or insta sync to microsoft account that you attend an event.
 - [ ] add backend connection
-- [ ] add new colleague info bar
-- [ ] add today birthdays info bar
+- [ ] add forum
+- [ ] add filter options to show posts within given timeframe
+- [ ] add pagination
 - Maybe even see more in settings?
 
 ## Recommended IDE Setup

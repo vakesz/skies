@@ -20,6 +20,7 @@ import { ref } from 'vue';
 import EventDetails from '@/components/EventDetails.vue';
 import AttendeesList from '@/components/AttendeesList.vue';
 import CommentsSection from '@/components/CommentsSection.vue';
+import { useRouter } from 'vue-router';
 import postsJson from '@/assets/posts.json'
 
 export default {
@@ -56,8 +57,6 @@ export default {
       if (!key) {
         throw new Error('Missing eventKey in component props.');
       }
-      console.log('key:', key);
-      
       let eventsObject = postsJson;
 
       if (!eventsObject) {
@@ -65,7 +64,7 @@ export default {
       }
 
       const event = eventsObject[key];
-      if (!event) {
+      if (event === {}) {
         throw new Error('Event not found in the database.');
       }
 
@@ -85,7 +84,8 @@ export default {
     } catch (error) {
       console.error('Error in DetailedPostView created hook:', error);
       // Optionally navigate to a "not found" pa  ge or display a user-friendly error message.
-      this.$router.replace({ name: 'NotFoundView' });
+      const router = useRouter();
+      router.push('/not-found');
     }
   }
 }

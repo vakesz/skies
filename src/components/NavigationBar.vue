@@ -137,6 +137,6 @@ onUnmounted(() => {
 const navClass = computed(() => {
   const baseClasses =
     'flex mx-auto sticky bg-neutral-200 backdrop-blur-md shadow-md p-2 px-4 transition-all duration-100 z-10 items-center max-w-[1200px]';
-  return isScrolled.value ? `${baseClasses} top-0 rounded-b-2xl` : `${baseClasses} top-3 rounded-full`;
+  return isScrolled.value ? `${baseClasses} top-0 rounded-b-2xl` : `${baseClasses} top-3 rounded-2xl`;
 });
 </script>
