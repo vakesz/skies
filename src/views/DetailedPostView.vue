@@ -11,17 +11,25 @@
       :eventPlace="eventPlace"
     />
     <AttendeesList :attendees="attendees" />
-    <CommentsSection :comments="comments" :currentUser="currentUser" :commenters="commenters" />
+    <CommentsSection :comments="comments" :currentUser="currentUser" />
   </div>
 </template>
 
 <script>
+import { ref } from 'vue';
 import EventDetails from '@/components/EventDetails.vue';
 import AttendeesList from '@/components/AttendeesList.vue';
 import CommentsSection from '@/components/CommentsSection.vue';
+import postsJson from '@/assets/posts.json'
 
 export default {
   name: 'DetailedPostView',
+  props: {
+    eventKey: {
+      type: String,
+      required: true
+    }
+  },
   components: {
     EventDetails,
     AttendeesList,
@@ -29,51 +37,55 @@ export default {
   },
   data() {
     return {
-      eventTitle: "New UI: A Glimpse Into the Future 2025",
-      eventImage: "https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg",
-      eventDescription: "JetBrains first released our IDEs in January 2001. Since then, many incremental changes have occurred to the UI we all know and love. Recently, we've made the most significant leap in UI design since launch. New UI will improve the user experience of all products, and we know you'll love its fresh and new perspective on productivity. <br><br>In this webinar, join our JetBrains Advocates as they share the New UI with you, giving you a glimpse at some of the visual improvements. Then, follow along as they code, run, and debug projects in the New UI while offering advice and answering your questions.<br><br>Register for an email reminder and a link to the recoding after the event: <a class=\"font-semibold\" href=\"\">https://info.jetbrains.com/jetbrains-webinar-october31-2022.html</a><br><br>About the Presenters:<br>Khalid Abuhakmeh is a .NET Developer Advocate at JetBrains. He has worked with .NET for over 15 years in various organizations. Khalid is also known for his blogging about .NET topics and helpfulness on social media platforms.<br><br>Paul Everitt is a Developer Advocate at JetBrains. Before that, Paul was a co-founder of Zope Corporation, taking the first open source application server through $14M of funding. Paul has bootstrapped both the Python Software Foundation and the Plone Foundation. Prior to that, Paul was an officer in the US Navy, starting <a class=\"font-semibold\" href=\"\">www.navy.mil</a> in 1993.<br><br>Helen Scott is a Java Developer Advocate at JetBrains. She has worked at numerous software companies in the last 20 years and has experienced the development cycle at all stages in various roles throughout that time. Helen loves to learn new tools and technologies, create content about that journey and share it with the community.",
-      eventDate: "March 25, 2025",
-      eventTime: "10:00 AM - 12:00 PM",
-      eventPlace: "New York, NY",
-      writtenBy: "John Doe",
-      lastEdited: "March 20, 2025",
-      attendees: [
-         { img: "https://randomuser.me/api/portraits/men/32.jpg", name: "John Smith", info: "Interested in networking" },
-         { img: "https://randomuser.me/api/portraits/women/44.jpg", name: "Jane Doe" },
-         { img: "https://randomuser.me/api/portraits/men/50.jpg", name: "John Doe" }
-      ],
-      currentUser: {
-         name: 'Mia Komisky',
-         img: 'https://randomuser.me/api/portraits/women/90.jpg'
-      },
-      commenters: [
-         { name: 'Sarah Johnson', img: 'https://randomuser.me/api/portraits/women/32.jpg' },
-         { name: 'Michael Chen', img: 'https://randomuser.me/api/portraits/men/44.jpg' },
-         { name: 'Emma Davis', img: 'https://randomuser.me/api/portraits/women/65.jpg' }
-      ],
-      comments: [
-         {
-            text: "This event looks amazing! Can't wait to attend.",
-            user: 0,
-            timestamp: "2 hours ago",
-            likes: 0,
-            isLiked: false
-         },
-         {
-            text: "Great lineup of speakers. Looking forward to it!",
-            user: 1,
-            timestamp: "1 hour ago",
-            likes: 0,
-            isLiked: false
-         },
-         {
-            text: "The new UI sounds promising. Excited to see it in action!",
-            user: 2,
-            timestamp: "30 minutes ago",
-            likes: 0,
-            isLiked: false
-         }
-      ]
+      eventTitle: '',
+      eventImage: '',
+      eventDescription: '',
+      eventDate: '',
+      eventTime: '',
+      eventPlace: '',
+      writtenBy: '',
+      lastEdited: '',
+      attendees: [],
+      comments: [],
+      currentUser: {}
+    }
+  },
+  created() {
+    try {
+      const key = this.eventKey;
+      if (!key) {
+        throw new Error('Missing eventKey in component props.');
+      }
+      console.log('key:', key);
+      
+      let eventsObject = postsJson;
+
+      if (!eventsObject) {
+        throw new Error('No events found in the database.');
+      }
+
+      const event = eventsObject[key];
+      if (!event) {
+        throw new Error('Event not found in the database.');
+      }
+
+      this.eventTitle = event.eventTitle;
+      this.eventImage = event.eventImage;
+      this.eventDescription = event.eventDescription;
+      this.eventDate = event.eventDate;
+      this.eventTime = event.eventTime;
+      this.eventPlace = event.eventPlace;
+      this.writtenBy = event.writtenBy;
+      this.lastEdited = event.lastEdited;
+      this.attendees = event.attendees;
+      this.comments = event.comments;
+      this.currentUser = event.currentUser;
+      
+      
+    } catch (error) {
+      console.error('Error in DetailedPostView created hook:', error);
+      // Optionally navigate to a "not found" pa  ge or display a user-friendly error message.
+      this.$router.replace({ name: 'NotFoundView' });
     }
   }
 }

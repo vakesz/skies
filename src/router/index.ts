@@ -15,8 +15,11 @@ const router = createRouter({
     },
     {
       path: '/post',
-      name: 'PostView',
+      name: 'DetailedPostView',
       component: DetailedPostView,
+      props: route => ({
+        eventKey: route.query.eventKey
+      })
     },
     {
       path: '/user',

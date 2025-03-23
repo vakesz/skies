@@ -8,7 +8,7 @@
           <h2 @click="goToPost" class="text-2xl font-bold text-gray-900 cursor-pointer">
             {{ event.title }}
           </h2>
-          <button
+          <button v-if="postType === 'event'"
             @click.stop="showModal = true"
             class="px-4 py-2 border border-gray-300 text-xs md:text-sm rounded-lg hover:bg-gray-100 transition-colors"
           >
@@ -57,8 +57,9 @@
     <SignupModal
       :show="showModal"
       :date="event.date"
+      :time="event.time"
       :location="event.location"
-      :users="users"
+      :attendees="event.attendees"
       @close="showModal = false"
       @confirm="confirmSignup"
     />
@@ -66,38 +67,46 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import EventMeta from '@/components/EventMeta.vue';
 import EventStats from '@/components/EventStats.vue';
 import SignupModal from '@/components/SignupModal.vue';
 
+const { postId, postType, event, users, stats } = defineProps({
+  postId: {
+    type: String,
+    required: true
+  },
+  postType: {
+    type: String,
+    required: true
+  },
+  event: {
+    type: Object,
+    required: true
+  },
+  users: {
+    type: Object,
+    default: () => ({})
+  },
+  stats: {
+    type: Object,
+    default: () => ({})
+  }
+});
+
 const router = useRouter();
 const showModal = ref(false);
 
-const event = reactive({
-  title: "Exciting Event",
-  date: "March 25, 2025",
-  location: "New York, NY",
-  image: "https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg",
-  description:
-    "Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure. Join us for an unforgettable experience filled with fun and adventure.",
-  tags: ["Adventure", "Fun"]
-});
-
-const users = [
-  { img: "https://randomuser.me/api/portraits/men/32.jpg" },
-  { img: "https://randomuser.me/api/portraits/women/44.jpg" },
-  { img: "https://randomuser.me/api/portraits/men/50.jpg" }
-];
-
-const stats = {
-  likes: 34,
-  going: 56,
-  comments: 12
+const goToPost = () => {
+  router.push({
+    name: 'DetailedPostView',
+    query: {
+      eventKey: postId  // using postId as the event key
+    }
+  });
 };
-
-const goToPost = () => router.push('/post');
 
 const confirmSignup = () => {
   alert("You have signed up!");

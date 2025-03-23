@@ -9,22 +9,22 @@
       
       <div class="space-y-4">
         <div class="space-y-2">
-          <p class="text-gray-600 flex items-center gap-2">
+          <p v-if="date" class="text-gray-600 flex items-center gap-2">
             <CalendarIcon class="w-4 h-4" />{{ date }}
           </p>
-          <p class="text-gray-600 flex items-center gap-2">
+          <p v-if="time" class="text-gray-600 flex items-center gap-2">
             <ClockIcon class="w-4 h-4" />{{ time }}
           </p>
-          <p class="text-gray-600 flex items-center gap-2">
+          <p v-if="location" class="text-gray-600 flex items-center gap-2">
             <LocationIcon class="w-4 h-4" />{{ location }}
           </p>
         </div>
 
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2" v-if="attendees && attendees.length">
           <img 
-            v-for="user in users" 
-            :key="user.img"
-            :src="user.img" 
+            v-for="attendee in attendees" 
+            :src="attendee.profileImage" 
+            :title="attendee.firstName + ' ' + attendee.lastName"
             class="w-8 h-8 rounded-full" 
             alt="Attendee"
           />
@@ -62,15 +62,9 @@ import LocationIcon from '@/components/icons/LocationIcon.vue';
 const props = defineProps({
   show: Boolean,
   date: String,
-  time: {
-    type: String,
-    default: () => '12:00 PM'
-  },
+  time: String,
   location: String,
-  users: {
-    type: Array,
-    default: () => []
-  }
+  attendees: Object
 });
 
 const emit = defineEmits(['close', 'confirm']);

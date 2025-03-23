@@ -1,0 +1,209 @@
+{
+  "1": {
+    "postType": "news",
+    "eventTitle": "GitHub Galaxy Keynote 2025",
+    "eventImage": "https://github.blog/wp-content/uploads/2023/03/1200x627_LinkedIn-Header-1.png?resize=1600%2C850",
+    "eventDescription": "Join us for the first event at GitHub Galaxy, a special keynote from GitHub leadership. Tune in to hear from GitHub CEO, Thomas Dohmke, GitHub Chief Product Officer, Inbal Shani, and other product leaders to learn how GitHub provides a world class, AI-powered, secure, and fully integrated developer experience for the largest businesses, teams, startups, and individuals alike to drive innovation at scale. Streaming live here on LinkedIn. We'll also have three days of fireside chats and forums from March 29-31. Learn more and register now at galaxy.github.com.",
+    "eventDate": "March 28, 2025",
+    "eventTime": "6:30 PM - 8:00 PM",
+    "eventPlace": "Whistler, BC",
+    "createdAt": "2025-03-23T08:00:00Z",
+    "writtenBy": "GitHub",
+    "lastEdited": "2025-03-20",
+    "postLikedBy": ["102", "103", "104", "105", "106"],
+    "eventTags": ["GitHub", "AI", "Keynote"],
+    "currentUser": {
+      "userid": 101,
+      "firstName": "John",
+      "lastName": "Doe",
+      "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
+      "info": "Can't wait to see the new UI!"
+    },
+    "attendees": [
+      {
+        "userid": 102,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
+        "info": ""
+      }
+    ],
+    "comments": [
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
+        "comment": "I'm excited to see the new UI!",
+        "commentLikedBy": ["102", "103"],
+        "commentedByUserId": "101",
+        "commentedAt": "2025-03-23T08:00:00Z"
+      },
+      {
+        "userid": 102,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
+        "comment": "I can't wait to see the new UI!",
+        "commentLikedBy": [],
+        "commentedByUserId": "102",
+        "commentedAt": "2025-03-23T08:00:00Z"
+      },
+      {
+        "userid": 103,
+        "firstName": "Bill",
+        "lastName": "Gates",
+        "profileImage": "https://randomuser.me/api/portraits/men/1.jpg",
+        "comment": "YOOOO wassup homies?",
+        "commentLikedBy": ["102", "103", "102","102","102","102","102","102","102","102"],
+        "commentedByUserId": "103",
+        "commentedAt": "2025-03-23T08:00:00Z"
+      }
+    ]
+  },
+  "2": {
+    "postType": "event",
+    "eventTitle": "Beerparty: The Future of Crypto 2025",
+    "eventImage": "https://static.independent.co.uk/2023/06/13/22/newFile-1.jpg?width=1200&auto=webp&quality=75",
+    "eventDescription": "JJoin us for an exciting BeerParty, where we mix great drinks with even greater conversations! Whether you're into crypto, finance, or just looking to have a good time, this is the place to be. Let's talk money, investments, and the future of digital assets—all while enjoying an amazing vibe.<br><br>But that's not all! As the night goes on, things get even wilder with events like a Wet T-Shirt Contest, a Beer Pong Championship, and the legendary Drunken Debate, where the most absurd financial theories battle it out. Will Bitcoin replace governments? Is Dogecoin secretly controlled by aliens? Grab a drink and argue your case!<br><br>Expect good laughs, great drinks, and unforgettable moments. Come thirsty and leave… well, however the night takes you! 🍻🔥",
+    "eventDate": "Apr 1, 2025",
+    "eventTime": "6:00 PM - 12:00 PM",
+    "eventPlace": "Budapest, HU",
+    "createdAt": "2025-03-23T08:00:00Z",
+    "writtenBy": "Gipsz Elek",
+    "lastEdited": "2025-03-20",
+    "postLikedBy": ["102", "103", "104", "105", "106", "102", "102", "102", "103", "104", "105", "106", "102", "102", "102", "103", "104", "105", "106", "102", "102", "102"],
+    "eventTags": ["Memes", "Beers ", "Crypto"],
+    "currentUser": {
+      "userid": 101,
+      "firstName": "John",
+      "lastName": "Doe",
+      "profileImage": "https://randomuser.me/api/portraits/men/50.jpg"
+    },
+    "attendees": [
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
+        "info": "Can't wait to see the new UI!"
+      },
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/men/51.jpg",
+        "info": "Can't wait to see the new UI!"
+      },
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/5.jpg",
+        "info": "Can't wait to see the new UI!"
+      },
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/50.jpg",
+        "info": "Can't wait to see the new UI!"
+      },
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/55.jpg",
+        "info": "Can't wait to see the new UI!"
+      },
+      {
+        "userid": 102,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
+        "info": ""
+      }
+    ],
+    "comments": [
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
+        "comment": "Alig várom már! :D",
+        "commentLikedBy": ["102", "103"],
+        "commentedByUserId": "101",
+        "commentedAt": "2025-03-23T08:00:00Z"
+      },
+      {
+        "userid": 102,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
+        "comment": "Úristen VERYBIG!",
+        "commentLikedBy": ["102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102"],
+        "commentedByUserId": "102",
+        "commentedAt": "2025-03-23T08:00:00Z"
+      }
+    ]
+  },
+  "3": {
+    "postType": "news",
+    "eventTitle": "New UI: A Glimpse Into the Future 2025",
+    "eventImage": "https://www.bleepstatic.com/content/hl-images/2024/06/11/JetBrains.jpg",
+    "eventDescription": "JetBrains first released our IDEs in January 2001. Since then, many incremental changes have occurred to the UI we all know and love. Recently, we've made the most significant leap in UI design since launch. New UI will improve the user experience of all products, and we know you'll love its fresh and new perspective on productivity. <br><br>In this webinar, join our JetBrains Advocates as they share the New UI with you, giving you a glimpse at some of the visual improvements. Then, follow along as they code, run, and debug projects in the New UI while offering advice and answering your questions.<br><br>Register for an email reminder and a link to the recoding after the event: <a class=\"font-semibold\" href=\"\">https://info.jetbrains.com/jetbrains-webinar-october31-2022.html</a><br><br>About the Presenters:<br>Khalid Abuhakmeh is a .NET Developer Advocate at JetBrains. He has worked with .NET for over 15 years in various organizations. Khalid is also known for his blogging about .NET topics and helpfulness on social media platforms.<br><br>Paul Everitt is a Developer Advocate at JetBrains. Before that, Paul was a co-founder of Zope Corporation, taking the first open source application server through $14M of funding. Paul has bootstrapped both the Python Software Foundation and the Plone Foundation. Prior to that, Paul was an officer in the US Navy, starting <a class=\"font-semibold\" href=\"\">www.navy.mil</a> in 1993.<br><br>Helen Scott is a Java Developer Advocate at JetBrains. She has worked at numerous software companies in the last 20 years and has experienced the development cycle at all stages in various roles throughout that time. Helen loves to learn new tools and technologies, create content about that journey and share it with the community.",
+    "eventDate": "March 20, 2025",
+    "eventTime": "6:30 PM - 8:00 PM",
+    "eventPlace": "New York, NY",
+    "createdAt": "2025-03-23T08:00:00Z",
+    "writtenBy": "John Doe",
+    "lastEdited": "2025-03-20",
+    "postLikedBy": ["102", "103", "104", "105", "106", "102", "102", "102"],
+    "eventTags": ["JetBrains", "UI", "Webinar"],
+    "currentUser": {
+      "userid": 101,
+      "firstName": "John",
+      "lastName": "Doe",
+      "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
+      "info": "Can't wait to see the new UI!"
+    },
+    "attendees": [
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
+        "info": "Can't wait to see the new UI!"
+      },
+      {
+        "userid": 102,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
+        "info": ""
+      }
+    ],
+    "comments": [
+      {
+        "userid": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
+        "comment": "I'm excited to see the new UI!",
+        "commentLikedBy": ["102", "103"],
+        "commentedByUserId": "101",
+        "commentedAt": "2025-03-23T08:00:00Z"
+      },
+      {
+        "userid": 102,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
+        "comment": "I can't wait to see the new UI!",
+        "commentLikedBy": [101],
+        "commentedByUserId": "102",
+        "commentedAt": "2025-03-23T08:00:00Z"
+      }
+    ]
+  }
+}
