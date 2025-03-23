@@ -10,53 +10,53 @@
     "createdAt": "2025-03-23T08:00:00Z",
     "writtenBy": "GitHub",
     "lastEdited": "2025-03-20",
-    "postLikedBy": ["102", "103", "104", "105", "106"],
+    "postLikedBy": ["202"],
     "eventTags": ["GitHub", "AI", "Keynote"],
     "currentUser": {
-      "userid": 101,
-      "firstName": "John",
-      "lastName": "Doe",
+      "userid": 201,
+      "firstName": "Michael",
+      "lastName": "Roberts",
       "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
       "info": "Can't wait to see the new UI!"
     },
     "attendees": [
       {
-        "userid": 102,
-        "firstName": "Jane",
-        "lastName": "Doe",
+        "userid": 202,
+        "firstName": "Sarah",
+        "lastName": "Johnson",
         "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
         "info": ""
       }
     ],
     "comments": [
       {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
+        "userid": 201,
+        "firstName": "Michael",
+        "lastName": "Roberts",
         "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
         "comment": "I'm excited to see the new UI!",
-        "commentLikedBy": ["102", "103"],
-        "commentedByUserId": "101",
+        "commentLikedBy": ["202", "203"],
+        "commentedByUserId": "201",
         "commentedAt": "2025-03-23T08:00:00Z"
       },
       {
-        "userid": 102,
-        "firstName": "Jane",
-        "lastName": "Doe",
+        "userid": 202,
+        "firstName": "Sarah",
+        "lastName": "Johnson",
         "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
         "comment": "I can't wait to see the new UI!",
         "commentLikedBy": [],
-        "commentedByUserId": "102",
+        "commentedByUserId": "202",
         "commentedAt": "2025-03-23T08:00:00Z"
       },
       {
-        "userid": 103,
-        "firstName": "Bill",
-        "lastName": "Gates",
+        "userid": 203,
+        "firstName": "David",
+        "lastName": "Miller",
         "profileImage": "https://randomuser.me/api/portraits/men/1.jpg",
         "comment": "YOOOO wassup homies?",
-        "commentLikedBy": ["102", "103", "102","102","102","102","102","102","102","102"],
-        "commentedByUserId": "103",
+        "commentLikedBy": ["202", "203", "204", "205"],
+        "commentedByUserId": "203",
         "commentedAt": "2025-03-23T08:00:00Z"
       }
     ]
@@ -65,84 +65,70 @@
     "postType": "event",
     "eventTitle": "Beerparty: The Future of Crypto 2025",
     "eventImage": "https://static.independent.co.uk/2023/06/13/22/newFile-1.jpg?width=1200&auto=webp&quality=75",
-    "eventDescription": "JJoin us for an exciting BeerParty, where we mix great drinks with even greater conversations! Whether you're into crypto, finance, or just looking to have a good time, this is the place to be. Let's talk money, investments, and the future of digital assets—all while enjoying an amazing vibe.<br><br>But that's not all! As the night goes on, things get even wilder with events like a Wet T-Shirt Contest, a Beer Pong Championship, and the legendary Drunken Debate, where the most absurd financial theories battle it out. Will Bitcoin replace governments? Is Dogecoin secretly controlled by aliens? Grab a drink and argue your case!<br><br>Expect good laughs, great drinks, and unforgettable moments. Come thirsty and leave… well, however the night takes you! 🍻🔥",
+    "eventDescription": "Join us for an exciting BeerParty, where we mix great drinks with even greater conversations! Whether you're into crypto, finance, or just looking to have a good time, this is the place to be. Let's talk money, investments, and the future of digital assets—all while enjoying an amazing vibe.<br><br>But that's not all! As the night goes on, things get even wilder with events like a Wet T-Shirt Contest, a Beer Pong Championship, and the legendary Drunken Debate, where the most absurd financial theories battle it out. Will Bitcoin replace governments? Is Dogecoin secretly controlled by aliens? Grab a drink and argue your case!<br><br>Expect good laughs, great drinks, and unforgettable moments. Come thirsty and leave… well, however the night takes you! 🍻🔥",
     "eventDate": "Apr 1, 2025",
     "eventTime": "6:00 PM - 12:00 PM",
     "eventPlace": "Budapest, HU",
     "createdAt": "2025-03-23T08:00:00Z",
-    "writtenBy": "Gipsz Elek",
+    "writtenBy": "Gergő Kovács",
     "lastEdited": "2025-03-20",
     "postLikedBy": ["102", "103", "104", "105", "106", "102", "102", "102", "103", "104", "105", "106", "102", "102", "102", "103", "104", "105", "106", "102", "102", "102"],
-    "eventTags": ["Memes", "Beers ", "Crypto"],
+    "eventTags": ["Memes", "Beers", "Crypto"],
     "currentUser": {
-      "userid": 101,
-      "firstName": "John",
-      "lastName": "Doe",
+      "userid": 201,
+      "firstName": "Michael",
+      "lastName": "Roberts",
       "profileImage": "https://randomuser.me/api/portraits/men/50.jpg"
     },
     "attendees": [
       {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
-        "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
-        "info": "Can't wait to see the new UI!"
-      },
-      {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
-        "profileImage": "https://randomuser.me/api/portraits/men/51.jpg",
-        "info": "Can't wait to see the new UI!"
-      },
-      {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
+        "userid": 202,
+        "firstName": "Sarah",
+        "lastName": "Johnson",
         "profileImage": "https://randomuser.me/api/portraits/women/5.jpg",
-        "info": "Can't wait to see the new UI!"
+        "info": "Looking forward to the event!"
       },
       {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
-        "profileImage": "https://randomuser.me/api/portraits/women/50.jpg",
-        "info": "Can't wait to see the new UI!"
+        "userid": 203,
+        "firstName": "David",
+        "lastName": "Miller",
+        "profileImage": "https://randomuser.me/api/portraits/men/8.jpg",
+        "info": "Hope there's enough beer!"
       },
       {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
-        "profileImage": "https://randomuser.me/api/portraits/women/55.jpg",
-        "info": "Can't wait to see the new UI!"
-      },
-      {
-        "userid": 102,
-        "firstName": "Jane",
-        "lastName": "Doe",
+        "userid": 205,
+        "firstName": "Anna",
+        "lastName": "Kiss",
         "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
-        "info": ""
+        "info": "Can't wait to see you all there!"
+      },
+      {
+        "userid": 204,
+        "firstName": "Liam",
+        "lastName": "Anderson",
+        "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
+        "info": "I'm bringing my friends!"
       }
     ],
     "comments": [
       {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
+        "userid": 204,
+        "firstName": "Liam",
+        "lastName": "Anderson",
         "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
         "comment": "Alig várom már! :D",
-        "commentLikedBy": ["102", "103"],
-        "commentedByUserId": "101",
+        "commentLikedBy": ["202", "203"],
+        "commentedByUserId": "204",
         "commentedAt": "2025-03-23T08:00:00Z"
       },
       {
-        "userid": 102,
-        "firstName": "Jane",
-        "lastName": "Doe",
+        "userid": 205,
+        "firstName": "Anna",
+        "lastName": "Kiss",
         "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
         "comment": "Úristen VERYBIG!",
         "commentLikedBy": ["102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102"],
-        "commentedByUserId": "102",
+        "commentedByUserId": "205",
         "commentedAt": "2025-03-23T08:00:00Z"
       }
     ]
@@ -156,52 +142,35 @@
     "eventTime": "6:30 PM - 8:00 PM",
     "eventPlace": "New York, NY",
     "createdAt": "2025-03-23T08:00:00Z",
-    "writtenBy": "John Doe",
+    "writtenBy": "John Smith",
     "lastEdited": "2025-03-20",
-    "postLikedBy": ["102", "103", "104", "105", "106", "102", "102", "102"],
+    "postLikedBy": ["202", "203", "204", "205", "206"],
     "eventTags": ["JetBrains", "UI", "Webinar"],
     "currentUser": {
-      "userid": 101,
-      "firstName": "John",
-      "lastName": "Doe",
+      "userid": 201,
+      "firstName": "Michael",
+      "lastName": "Roberts",
       "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
       "info": "Can't wait to see the new UI!"
     },
     "attendees": [
       {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
-        "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
-        "info": "Can't wait to see the new UI!"
-      },
-      {
-        "userid": 102,
-        "firstName": "Jane",
-        "lastName": "Doe",
+        "userid": 202,
+        "firstName": "Sarah",
+        "lastName": "Johnson",
         "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
         "info": ""
       }
     ],
     "comments": [
       {
-        "userid": 101,
-        "firstName": "John",
-        "lastName": "Doe",
-        "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
-        "comment": "I'm excited to see the new UI!",
-        "commentLikedBy": ["102", "103"],
-        "commentedByUserId": "101",
-        "commentedAt": "2025-03-23T08:00:00Z"
-      },
-      {
-        "userid": 102,
-        "firstName": "Jane",
-        "lastName": "Doe",
-        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
-        "comment": "I can't wait to see the new UI!",
-        "commentLikedBy": [101],
-        "commentedByUserId": "102",
+        "userid": 203,
+        "firstName": "David",
+        "lastName": "Miller",
+        "profileImage": "https://randomuser.me/api/portraits/men/8.jpg",
+        "comment": "This update looks promising!",
+        "commentLikedBy": ["202", "203"],
+        "commentedByUserId": "203",
         "commentedAt": "2025-03-23T08:00:00Z"
       }
     ]

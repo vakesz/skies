@@ -32,6 +32,7 @@
     <!-- Right Section -->
     <div class="w-full md:w-1/3 relative order-1 md:order-last">
       <img
+        @click="goToPost" 
         :src="event.image"
         :alt="event.title"
         class="object-cover w-full h-60 md:h-full brightness-90 cursor-pointer"
