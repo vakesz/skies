@@ -64,7 +64,8 @@ export default {
       }
 
       const event = eventsObject[key];
-      if (event === {}) {
+      // TODO: This should be updated later on to be handled better.
+      if (!event || event === {}) { 
         throw new Error('Event not found in the database.');
       }
 
