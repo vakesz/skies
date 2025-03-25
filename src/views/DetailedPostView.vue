@@ -6,9 +6,9 @@
       :eventDescription="eventDescription"
       :writtenBy="writtenBy"
       :lastEdited="lastEdited"
-      :eventTime="eventTime"
       :eventDate="eventDate"
       :eventPlace="eventPlace"
+      :createdAt="createdAt"
     />
     <AttendeesList :attendees="attendees" />
     <CommentsSection :comments="comments" :currentUser="currentUser" />
@@ -40,11 +40,11 @@ export default {
   },
   data() {
     return {
+      createdAt: '',
       eventTitle: '',
       eventImage: '',
       eventDescription: '',
       eventDate: '',
-      eventTime: '',
       eventPlace: '',
       writtenBy: '',
       lastEdited: '',
@@ -70,11 +70,12 @@ export default {
         throw new Error('Event not found in the database.');
       }
 
+      this.createdAt = event.createdAt;
+      console.log(this.createdAt);
       this.eventTitle = event.eventTitle;
       this.eventImage = event.eventImage;
       this.eventDescription = event.eventDescription;
       this.eventDate = event.eventDate;
-      this.eventTime = event.eventTime;
       this.eventPlace = event.eventPlace;
       this.writtenBy = event.writtenBy;
       this.lastEdited = event.lastEdited;
@@ -85,7 +86,6 @@ export default {
       
     } catch (error) {
       console.error('Error in DetailedPostView created hook:', error);
-      // Optionally navigate to a "not found" pa  ge or display a user-friendly error message.
       const router = useRouter();
       router.push('/not-found');
     }

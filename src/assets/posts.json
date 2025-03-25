@@ -4,16 +4,15 @@
     "eventTitle": "GitHub Galaxy Keynote 2025",
     "eventImage": "https://github.blog/wp-content/uploads/2023/03/1200x627_LinkedIn-Header-1.png?resize=1600%2C850",
     "eventDescription": "Join us for the first event at GitHub Galaxy, a special keynote from GitHub leadership. Tune in to hear from GitHub CEO, Thomas Dohmke, GitHub Chief Product Officer, Inbal Shani, and other product leaders to learn how GitHub provides a world class, AI-powered, secure, and fully integrated developer experience for the largest businesses, teams, startups, and individuals alike to drive innovation at scale. Streaming live here on LinkedIn. We'll also have three days of fireside chats and forums from March 29-31. Learn more and register now at galaxy.github.com.",
-    "eventDate": "March 28, 2025",
-    "eventTime": "6:30 PM - 8:00 PM",
+    "eventDate": "2025-03-23T18:30:00",
     "eventPlace": "Whistler, BC",
     "createdAt": "2025-03-23T08:00:00Z",
     "writtenBy": "GitHub",
-    "lastEdited": "2025-03-20",
+    "lastEdited": "2025-03-23T08:00:00Z",
     "postLikedBy": ["202"],
     "eventTags": ["GitHub", "AI", "Keynote"],
     "currentUser": {
-      "userid": 201,
+      "userid": "201",
       "firstName": "Michael",
       "lastName": "Roberts",
       "profileImage": "https://randomuser.me/api/portraits/men/50.jpg",
@@ -21,7 +20,7 @@
     },
     "attendees": [
       {
-        "userid": 202,
+        "userid": "202",
         "firstName": "Sarah",
         "lastName": "Johnson",
         "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
@@ -30,13 +29,13 @@
     ],
     "comments": [
       {
-        "userid": 201,
+        "userid": "201",
         "firstName": "Michael",
         "lastName": "Roberts",
         "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
         "comment": "I'm excited to see the new UI!",
-        "commentLikedBy": ["202", "203"],
-        "commentedByUserId": "201",
+        "commentLikedBy": ["201", "203"],
+        "commentedByUserId": "202",
         "commentedAt": "2025-03-23T08:00:00Z"
       },
       {

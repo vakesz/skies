@@ -2,7 +2,7 @@
   <div class="flex items-center gap-4 mt-2 text-sm text-gray-500">
     <div class="flex items-center gap-1">
       <CalendarIcon class="w-4 h-4" />
-      {{ date }}
+      {{ new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
     </div>
     <div class="flex items-center gap-1">
       <MapPinIcon class="w-4 h-4" />

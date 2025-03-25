@@ -16,7 +16,6 @@ import postsJson from '@/assets/posts.json'
         image: value.eventImage,
         description: value.eventDescription,
         date: value.eventDate,
-        time: value.eventTime,
         location: value.eventPlace,
         tags: value.eventTags,
         attendees: value.attendees
