@@ -13,7 +13,7 @@
 <script>
 import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/vue/24/outline';
 export default {
-  name: 'ToggleArrow',
+  name: 'ChevronDropdown',
   components: {
     ChevronRightIcon,
     ChevronDownIcon

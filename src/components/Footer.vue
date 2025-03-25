@@ -25,7 +25,6 @@
               :href="social.href"
               target="_blank"
               rel="noopener noreferrer"
-              :class="social.hoverClass"
               :aria-label="social.name"
             >
               <component :is="social.icon" />
@@ -54,26 +53,22 @@ const socials = [
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com',
-    icon: LinkedInIcon,
-    hoverClass: 'hover:text-blue-400 transition-colors',
+    icon: LinkedInIcon
   },
   {
     name: 'YouTube',
     href: 'https://youtube.com',
-    icon: YouTubeIcon,
-    hoverClass: 'hover:text-red-500 transition-colors',
+    icon: YouTubeIcon
   },
   {
     name: 'Twitter',
     href: 'https://x.com',
-    icon: TwitterIcon,
-    hoverClass: 'hover:text-blue-400 transition-colors',
+    icon: TwitterIcon
   },
   {
     name: 'Facebook',
     href: 'https://www.facebook.com',
-    icon: FacebookIcon,
-    hoverClass: 'hover:text-blue-500 transition-colors',
+    icon: FacebookIcon
   },
 ];
 </script>

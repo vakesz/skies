@@ -9,11 +9,11 @@
       
       <div class="space-y-4">
         <div class="space-y-2">
-          <p v-if="date" class="text-gray-600 flex items-center gap-2">
-            <CalendarIcon class="w-4 h-4" />{{ date }}
+          <p v-if="datetime" class="text-gray-600 flex items-center gap-2">
+            <CalendarIcon class="w-4 h-4" />{{ new Date(datetime).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
           </p>
-          <p v-if="time" class="text-gray-600 flex items-center gap-2">
-            <ClockIcon class="w-4 h-4" />{{ time }}
+          <p v-if="datetime" class="text-gray-600 flex items-center gap-2">
+            <ClockIcon class="w-4 h-4" />{{ new Date(datetime).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' }) }}
           </p>
           <p v-if="location" class="text-gray-600 flex items-center gap-2">
             <MapPinIcon class="w-4 h-4" />{{ location }}
@@ -26,7 +26,7 @@
             :src="attendee.profileImage" 
             :title="attendee.firstName + ' ' + attendee.lastName"
             class="w-8 h-8 rounded-full" 
-            alt="Attendee"
+            alt="attendee.firstName + ' ' + attendee.lastName"
           />
           <span class="text-sm text-gray-500">and others are going</span>
         </div>
@@ -57,8 +57,7 @@ import { XMarkIcon, CheckIcon, CalendarIcon, ClockIcon, MapPinIcon } from '@hero
 
 const props = defineProps({
   show: Boolean,
-  date: String,
-  time: String,
+  datetime: String,
   location: String,
   attendees: Object
 });

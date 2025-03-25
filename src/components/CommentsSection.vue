@@ -2,7 +2,7 @@
   <div class="w-full max-w-6xl mt-8">
     <!-- Comments Section Toggle -->
     <div class="flex justify-between items-center">
-      <ToggleArrow text="Comments" :collapsed="!showComments" @click="toggleComments"
+      <ChevronDropdown text="Comments" :collapsed="!showComments" @click="toggleComments"
         class="cursor-pointer text-black" />
     </div>
     <!-- Comments List and Form -->
@@ -64,12 +64,12 @@
 
 <script>
 import { ArrowRightIcon, HeartIcon } from '@heroicons/vue/24/outline';
-import ToggleArrow from '@/components/icons/ToggleArrow.vue';
+import ChevronDropdown from '@/components/ChevronDropdown.vue';
 
 export default {
   name: 'CommentsSection',
   components: {
-    ToggleArrow,
+    ChevronDropdown,
     ArrowRightIcon,
     HeartIcon
   },

@@ -71,7 +71,6 @@ export default {
       }
 
       this.createdAt = event.createdAt;
-      console.log(this.createdAt);
       this.eventTitle = event.eventTitle;
       this.eventImage = event.eventImage;
       this.eventDescription = event.eventDescription;
@@ -82,8 +81,6 @@ export default {
       this.attendees = event.attendees;
       this.comments = event.comments;
       this.currentUser = event.currentUser;
-      
-      
     } catch (error) {
       console.error('Error in DetailedPostView created hook:', error);
       const router = useRouter();

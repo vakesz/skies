@@ -3,39 +3,36 @@
     <!-- Event Header -->
     <div class="relative">
       <img :src="eventImage" :alt="eventTitle" class="w-full h-64 object-cover" />
-      <div
-        class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent flex items-center justify-center">
-        <div class="flex flex-col items-center space-y-2">
-          <h2 class="text-2xl text-center font-semibold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
-            {{ eventTitle }}
-          </h2>
-          <h3 class="text-sm text-center text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
-            Posted at: {{ new Date(createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }} by: {{ writtenBy }}
+      <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent flex items-center justify-center">
+        <div class="text-center text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+          <h2 class="text-2xl font-semibold">{{ eventTitle }}</h2>
+          <h3 class="text-sm">
+            Posted at: {{ formatDate(createdAt) }} by: {{ writtenBy }}
           </h3>
         </div>
       </div>
     </div>
+
     <div class="p-6">
       <!-- Event Info -->
-      <div class="prose prose-gray mt-4">
-        <div style="white-space: pre-line;">{{ eventDescription }}</div>
+      <div class="prose prose-gray mt-4" style="white-space: pre-line;">
+        {{ eventDescription }}
       </div>
+
       <!-- Last Edited -->
       <div class="mt-4 text-gray-500 text-sm">
-        <p><strong>Last edited:</strong>
-          {{ new Date(lastEdited).toLocaleDateString('en-US', {
-            year: 'numeric', month: 'long', day: 'numeric', hour:
-              'numeric', minute: 'numeric' }) }}
-        </p>
+        <p><strong>Last edited:</strong> {{ formatDateTime(lastEdited) }}</p>
       </div>
+
       <!-- Time and Location -->
       <div class="mt-4 space-y-1 text-gray-500 text-sm">
         <p class="flex items-center gap-2">
           <CalendarIcon class="w-4 h-4" />
-          {{ new Date(eventDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
+          {{ formatDate(eventDate) }}
           <ClockIcon class="w-4 h-4" />
-          {{ new Date(eventDate).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' }) }}
-          <MapPinIcon class="w-4 h-4" /> {{ eventPlace }}
+          {{ formatTime(eventDate) }}
+          <MapPinIcon class="w-4 h-4" />
+          {{ eventPlace }}
         </p>
       </div>
     </div>
@@ -55,4 +52,19 @@ defineProps({
   eventPlace: { type: String, required: true },
   createdAt: { type: Date, required: true }
 });
+
+const formatDate = (date) =>
+  new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const formatDateTime = (date) =>
+  new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric'
+  });
+
+const formatTime = (date) =>
+  new Date(date).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' });
 </script>

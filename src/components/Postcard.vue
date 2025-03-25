@@ -57,8 +57,7 @@
   >
     <SignupModal
       :show="showModal"
-      :date="event.date"
-      :time="event.time"
+      :datetime="event.date"
       :location="event.location"
       :attendees="event.attendees"
       @close="showModal = false"

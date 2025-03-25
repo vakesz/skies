@@ -1,6 +1,6 @@
 <template>
   <nav :class="navClass">
-    <Bars3Icon class="ml-1 mr-1 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="Main Menu" />
+    <Bars3Icon class="mr-2 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="Main Menu" />
 
     <div class="flex-1 flex justify-center items-center">
       <img class="h-8 transition-transform duration-300 hover:scale-105 cursor-pointer" @click="goHome"
@@ -9,7 +9,7 @@
 
     <!-- Search Icon with Dropdown -->
     <div class="relative" ref="searchDropdown">
-      <MagnifyingGlassIcon class="ml-1 mr-1 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="Search"
+      <MagnifyingGlassIcon class="mr-2 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="Search"
         @click="toggleSearchDropdown" />
       <div v-if="isSearchDropdownOpen" class="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-20">
         <input ref="searchInput" type="text"
@@ -20,7 +20,7 @@
 
     <!-- User Icon with Dropdown -->
     <div class="relative" ref="userDropdown">
-      <UserCircleIcon class="ml-1 mr-1 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="User Menu"
+      <UserCircleIcon class="ml-2 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="User Menu"
         @click="toggleUserDropdown" />
       <div v-if="isUserDropdownOpen" class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4 z-20">
         <div class="flex items-center">
