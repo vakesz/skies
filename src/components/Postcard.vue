@@ -10,7 +10,7 @@
           </h2>
           <button v-if="postType === 'event'"
             @click.stop="showModal = true"
-            class="px-4 py-2 border border-gray-300 text-xs md:text-sm rounded-lg hover:bg-gray-100 transition-colors"
+            class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 cursor-pointer"
           >
             Sign Up
           </button>

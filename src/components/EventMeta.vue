@@ -5,15 +5,15 @@
       {{ date }}
     </div>
     <div class="flex items-center gap-1">
-      <LocationIcon class="w-4 h-4" />
+      <MapPinIcon class="w-4 h-4" />
       {{ location }}
     </div>
   </div>
 </template>
 
 <script setup>
-import CalendarIcon from '@/components/icons/CalendarIcon.vue';
-import LocationIcon from '@/components/icons/LocationIcon.vue';
+import { CalendarIcon, MapPinIcon } from '@heroicons/vue/24/outline';
+
 defineProps({
   date: {
     type: String,

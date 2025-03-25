@@ -5,20 +5,18 @@
       {{ stats.likes }}
     </div>
     <div class="flex items-center gap-2">
-      <UsersIcon class="w-4 h-4" />
+      <UserIcon class="w-4 h-4" />
       {{ stats.going }}
     </div>
     <div class="flex items-center gap-2">
-      <ChatIcon class="w-4 h-4" />
+      <ChatBubbleBottomCenterIcon class="w-4 h-4" />
       {{ stats.comments }}
     </div>
   </div>
 </template>
 
 <script setup>
-import HeartIcon from '@/components/icons/HeartIcon.vue';
-import UsersIcon from '@/components/icons/UsersIcon.vue';
-import ChatIcon from '@/components/icons/ChatIcon.vue';
+import { ChatBubbleBottomCenterIcon, UserIcon, HeartIcon } from '@heroicons/vue/24/outline';
 
 defineProps({
   stats: {

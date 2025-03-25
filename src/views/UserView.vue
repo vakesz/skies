@@ -155,7 +155,7 @@ export default {
         location: "",
         education: "",
         foodAllergies: "",
-        website: "", // <-- Added website field
+        website: "",
         description: ""
       }
     };

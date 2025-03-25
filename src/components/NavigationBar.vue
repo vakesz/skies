@@ -1,45 +1,28 @@
 <template>
   <nav :class="navClass">
-    <button class="p-2 rounded-full" aria-label="Main Menu">
-      <MenuIcon class="hover:scale-110 cursor-pointer" />
-    </button>
+    <Bars3Icon class="ml-1 mr-1 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="Main Menu" />
 
     <div class="flex-1 flex justify-center items-center">
-      <img
-        class="h-8 transition-transform duration-300 hover:scale-105 cursor-pointer"
-        @click="goHome"
-        src="../assets/altlogo.png"
-        alt="Company Logo"
-      />
+      <img class="h-8 transition-transform duration-300 hover:scale-105 cursor-pointer" @click="goHome"
+        src="../assets/altlogo.png" alt="Company Logo" />
     </div>
 
     <!-- Search Icon with Dropdown -->
     <div class="relative" ref="searchDropdown">
-      <button class="p-2 rounded-full" aria-label="Search" @click="toggleSearchDropdown">
-        <SearchIcon class="hover:scale-110 cursor-pointer" />
-      </button>
-      <div
-        v-if="isSearchDropdownOpen"
-        class="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-20"
-      >
-        <input
-          ref="searchInput"
-          type="text"
+      <MagnifyingGlassIcon class="ml-1 mr-1 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="Search"
+        @click="toggleSearchDropdown" />
+      <div v-if="isSearchDropdownOpen" class="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-20">
+        <input ref="searchInput" type="text"
           class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-black"
-          placeholder="Search..."
-        />
+          placeholder="Search..." />
       </div>
     </div>
 
     <!-- User Icon with Dropdown -->
     <div class="relative" ref="userDropdown">
-      <button class="p-2 rounded-full" aria-label="User Menu" @click="toggleUserDropdown">
-        <UserIcon class="hover:scale-110 cursor-pointer" />
-      </button>
-      <div
-        v-if="isUserDropdownOpen"
-        class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4 z-20"
-      >
+      <UserCircleIcon class="ml-1 mr-1 h-5 w-5 hover:scale-110 cursor-pointer" aria-label="User Menu"
+        @click="toggleUserDropdown" />
+      <div v-if="isUserDropdownOpen" class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4 z-20">
         <div class="flex items-center">
           <p class="text-sm font-semibold flex-1">
             Welcome, <br />{{ user.firstName }} {{ user.lastName }}!
@@ -47,28 +30,22 @@
           <img class="w-8 h-8 rounded-full" :src="user.profilePicture" alt="Profile Picture" />
         </div>
         <hr class="my-2" />
-        <a href="/user"
-          ><button class="w-full text-left p-2 hover:bg-gray-100 rounded cursor-pointer">
+        <a href="/user"><button class="w-full text-left p-2 hover:bg-gray-100 rounded cursor-pointer">
             Profile
-          </button></a
-        >
-        <a href="/settings"
-          ><button class="w-full text-left p-2 hover:bg-gray-100 rounded cursor-pointer">
+          </button></a>
+        <a href="/settings"><button class="w-full text-left p-2 hover:bg-gray-100 rounded cursor-pointer">
             Settings
-          </button></a
-        >
-        <a href="/logout"
-          ><button class="w-full text-left p-2 hover:bg-gray-100 rounded cursor-pointer">
+          </button></a>
+        <a href="/logout"><button class="w-full text-left p-2 hover:bg-gray-100 rounded cursor-pointer">
             Logout
-          </button></a
-        >
+          </button></a>
       </div>
     </div>
 
     <!-- More Options Icon (currently commented out) -->
     <!--
     <button class="p-2 rounded-full" aria-label="More Options">
-      <MoreIcon class="hover:scale-110" />
+      <EllipsisVerticalIcon class="hover:scale-110" />
     </button>
     -->
   </nav>
@@ -77,10 +54,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
-import MenuIcon from '@/components/icons/MenuIcon.vue';
-import SearchIcon from '@/components/icons/SearchIcon.vue';
-import UserIcon from '@/components/icons/UserIcon.vue';
-import MoreIcon from '@/components/icons/MoreIcon.vue';
+import { Bars3Icon, MagnifyingGlassIcon, UserCircleIcon, EllipsisVerticalIcon } from '@heroicons/vue/24/outline';
 
 const router = useRouter();
 const goHome = () => router.push('/');

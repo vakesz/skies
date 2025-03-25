@@ -17,10 +17,12 @@
 
 <script>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import EventDetails from '@/components/EventDetails.vue';
 import AttendeesList from '@/components/AttendeesList.vue';
 import CommentsSection from '@/components/CommentsSection.vue';
-import { useRouter } from 'vue-router';
+
+// TODO: Replace this with your actual data source
 import postsJson from '@/assets/posts.json'
 
 export default {
@@ -64,7 +66,7 @@ export default {
       }
 
       const event = eventsObject[key];
-      if (event === {}) {
+      if (!event) {
         throw new Error('Event not found in the database.');
       }
 

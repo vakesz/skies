@@ -28,7 +28,7 @@
              <CalendarIcon class="w-4 h-4" /> {{ eventDate }}
           </p>
           <p class="flex items-center gap-2">
-             <LocationIcon class="w-4 h-4" /> {{ eventPlace }}
+             <MapPinIcon class="w-4 h-4" /> {{ eventPlace }}
           </p>
        </div>
      </div>
@@ -36,9 +36,7 @@
  </template>
  
  <script setup>
- import CalendarIcon from '@/components/icons/CalendarIcon.vue';
- import LocationIcon from '@/components/icons/LocationIcon.vue';
- import ClockIcon from '@/components/icons/ClockIcon.vue';
+ import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/vue/24/outline';
  
  defineProps({
    eventTitle: { type: String, required: true },

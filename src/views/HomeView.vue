@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Postcard from '@/components/Postcard.vue'
+
+//TODO: Replace with actual data from the backend
 import postsJson from '@/assets/posts.json'
 </script>
 

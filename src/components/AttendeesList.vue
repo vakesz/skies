@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import ToggleArrow from '@/components/icons/ToggleArrow.vue';
+import ToggleArrow from '@/components/icons/ToggleArrow.vue'; // TODO: Replace with heroicons-vue
 
 export default {
   name: 'AttendeesList',

@@ -16,7 +16,7 @@
             <ClockIcon class="w-4 h-4" />{{ time }}
           </p>
           <p v-if="location" class="text-gray-600 flex items-center gap-2">
-            <LocationIcon class="w-4 h-4" />{{ location }}
+            <MapPinIcon class="w-4 h-4" />{{ location }}
           </p>
         </div>
 
@@ -53,11 +53,7 @@
 </template>
 
 <script setup>
-import XMarkIcon from '@/components/icons/XMarkIcon.vue';
-import CheckIcon from '@/components/icons/CheckIcon.vue';
-import CalendarIcon from '@/components/icons/CalendarIcon.vue';
-import ClockIcon from '@/components/icons/ClockIcon.vue';
-import LocationIcon from '@/components/icons/LocationIcon.vue';
+import { XMarkIcon, CheckIcon, CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/vue/24/outline';
 
 const props = defineProps({
   show: Boolean,
