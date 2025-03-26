@@ -27,7 +27,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
-
+import { Bars3Icon, HomeIcon, CalendarIcon, ChatBubbleLeftRightIcon, UserCircleIcon, UserIcon, WrenchIcon, ArrowLeftEndOnRectangleIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/vue/24/outline';
 // Props
 defineProps({
   triggerIcon: {
