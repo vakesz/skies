@@ -1,9 +1,7 @@
 <template>
   <div ref="dropdown">
     <!-- Trigger -->
-    <button @click="toggleDropdown" class="sm:h-5 h-6 sm:w-5 w-6 hover:scale-110 cursor-pointer flex items-center">
-      <component :is="triggerIcon" />
-    </button>
+    <component :is="triggerIcon" @click="toggleDropdown" class="text-black sm:h-5 h-6 sm:w-5 w-6 hover:scale-110 cursor-pointer flex items-center" />
 
     <transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform scale-95 opacity-0"
       enter-to-class="transform scale-100 opacity-100" leave-active-class="transition duration-75 ease-in"
@@ -27,7 +25,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { Bars3Icon, HomeIcon, CalendarIcon, ChatBubbleLeftRightIcon, UserCircleIcon, UserIcon, WrenchIcon, ArrowLeftEndOnRectangleIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/vue/24/outline';
+
 // Props
 defineProps({
   triggerIcon: {
