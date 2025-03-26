@@ -20,7 +20,7 @@
                   {{ comment.firstName }} {{ comment.lastName }}
                 </h5>
                 <span class="text-sm text-gray-500">
-                  {{ new Date(comment.commentedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' }) 
+                  {{ new Date(comment.commentedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' }) }}
                 </span>
               </div>
               <p class="mt-2 text-gray-700">
