@@ -19,16 +19,16 @@
       <!-- Dropdown Content -->
       <div
         v-if="isOpen"
-        :class="dropdownPositionClass"
+        class="absolute top-8 p-2 w-52 rounded-2xl bg-white shadow-lg focus:outline-none"
       >
-        <div v-for="(item, index) in menuItems" :key="index">
-          <button
-            class="p-4 md:p-2 w-full text-left text-gray-900 hover:bg-blue-600 hover:text-white rounded-lg flex items-center cursor-pointer "
-            @click="navigateTo(item.link)"
-          >
-            <component :is="item.icon" class="inline-block mr-2 h-5 w-5" aria-hidden="true" />
-            {{ item.name }}
-          </button>
+        <div
+          v-for="(item, index) in menuItems"
+          :key="index"
+          class="flex p-2 w-full text-left text-gray-900 hover:bg-blue-600 hover:text-white rounded-lg items-center cursor-pointer"
+          @click="navigateTo(item.link)"
+        >
+          <component :is="item.icon" class="inline-block mr-2 h-5 w-5" aria-hidden="true" />
+          {{ item.name }}
         </div>
       </div>
     </transition>
@@ -36,7 +36,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 // Props
@@ -54,13 +54,9 @@ defineProps({
 const isOpen = ref(false);
 const dropdown = ref(null);
 const router = useRouter();
-const dropdownPositionClass = ref('left-0');
 
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
-  if (isOpen.value) {
-    adjustDropdownPosition();
-  }
 };
 
 const handleClickOutside = (event) => {
@@ -71,20 +67,14 @@ const handleClickOutside = (event) => {
 
 const navigateTo = (link) => {
   if (link) {
-    router.push(link);
+    router.push(link).catch((err) => {
+      if (!err.message.includes('NavigationDuplicated')) {
+        console.error(err);
+      }
+    });
     isOpen.value = false;
   }
 };
-
-const adjustDropdownPosition = () => {
-  if (!dropdown.value) return;
-
-  const dropdownRect = dropdown.value.getBoundingClientRect();
-  const viewportWidth = window.innerWidth;
-
-  const baseClasses = `absolute top-8 p-2 w-full w-52 rounded-2xl bg-white shadow-lg focus:outline-none`
-  dropdownPositionClass.value = (dropdownRect.right + 200 > viewportWidth) ? `${baseClasses} right-0` : `${baseClasses} left-0`;
-}; 
 
 onMounted(() => {
   document.addEventListener('click', handleClickOutside);
