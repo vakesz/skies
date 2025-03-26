@@ -4,7 +4,7 @@
       <HeartIcon class="w-4 h-4" />
       {{ stats.likes }}
     </div>
-    <div class="flex items-center gap-2">
+    <div v-if="stats.going" class="flex items-center gap-2">
       <UserIcon class="w-4 h-4" />
       {{ stats.going }}
     </div>

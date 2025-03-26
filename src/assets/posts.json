@@ -19,13 +19,6 @@
       "info": "Can't wait to see the new UI!"
     },
     "attendees": [
-      {
-        "userid": "202",
-        "firstName": "Sarah",
-        "lastName": "Johnson",
-        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
-        "info": ""
-      }
     ],
     "comments": [
       {
@@ -153,13 +146,6 @@
       "info": "Can't wait to see the new UI!"
     },
     "attendees": [
-      {
-        "userid": 202,
-        "firstName": "Sarah",
-        "lastName": "Johnson",
-        "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
-        "info": ""
-      }
     ],
     "comments": [
       {

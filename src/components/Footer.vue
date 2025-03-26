@@ -19,14 +19,8 @@
             Socials
           </h6>
           <div class="flex gap-4">
-            <a
-              v-for="social in socials"
-              :key="social.name"
-              :href="social.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              :aria-label="social.name"
-            >
+            <a v-for="social in socials" :key="social.name" :href="social.href" target="_blank"
+              rel="noopener noreferrer" :class="social.hoverClass" :aria-label="social.name">
               <component :is="social.icon" />
             </a>
           </div>
@@ -53,22 +47,27 @@ const socials = [
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com',
-    icon: LinkedInIcon
+    icon: LinkedInIcon,
+    hoverClass: 'hover:text-blue-400 transition-colors',
   },
   {
     name: 'YouTube',
     href: 'https://youtube.com',
-    icon: YouTubeIcon
+    icon: YouTubeIcon,
+    hoverClass: 'hover:text-red-500 transition-colors',
   },
   {
     name: 'Twitter',
     href: 'https://x.com',
-    icon: TwitterIcon
+    icon: TwitterIcon,
+    hoverClass: 'hover:text-blue-400 transition-colors',
   },
   {
     name: 'Facebook',
     href: 'https://www.facebook.com',
-    icon: FacebookIcon
+    icon: FacebookIcon,
+    hoverClass: 'hover:text-blue-500 transition-colors',
   },
+
 ];
 </script>

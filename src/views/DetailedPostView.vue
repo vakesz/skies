@@ -10,7 +10,7 @@
       :eventPlace="eventPlace"
       :createdAt="createdAt"
     />
-    <AttendeesList :attendees="attendees" />
+    <AttendeesList v-if="attendees.length" :attendees="attendees" />
     <CommentsSection :comments="comments" :currentUser="currentUser" />
   </div>
 </template>
