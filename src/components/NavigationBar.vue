@@ -17,8 +17,8 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { Bars3Icon, HomeIcon, CalendarIcon, ChatBubbleLeftRightIcon, UserCircleIcon, UserIcon, WrenchIcon, ArrowLeftEndOnRectangleIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/vue/24/outline';
-import DropdownMenu from './DropdownMenu.vue';
-import DropdownSearch from './DropdownSearch.vue';
+import DropdownMenu from '@/components/DropdownMenu.vue';
+import DropdownSearch from '@/components/DropdownSearch.vue';
 
 const router = useRouter();
 const goHome = () => router.push('/');
