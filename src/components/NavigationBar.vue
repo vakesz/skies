@@ -1,40 +1,24 @@
 <template>
   <nav :class="navClass">
-    <!-- Menu -->
-    <DropdownMenu
-      :triggerIcon="Bars3Icon"
-      :menuItems="menuItems"
-    />
+    <DropdownMenu :triggerIcon="Bars3Icon" :menuItems="menuItems" openfrom="left" />
 
     <div class="flex-1 flex justify-center items-center">
-      <img
-        class="h-8 transition-transform duration-300 hover:scale-105 cursor-pointer"
-        @click="goHome"
-        src="../assets/altlogo.png"
-        alt="Company Logo"
-      />
+      <img class="h-8 transition-transform duration-300 hover:scale-105 cursor-pointer" @click="goHome"
+        src="../assets/altlogo.png" alt="Company Logo" />
     </div>
 
-   <!-- Search Icon with Dropdown -->
-   <div class="relative" ref="searchDropdown">
-      <MagnifyingGlassIcon
-        class="mr-2 h-5 w-5 hover:scale-110 cursor-pointer"
-        aria-label="Search" 
-      />
-    </div>
+    <DropdownSearch />
 
-    <DropdownMenu
-      :triggerIcon="UserCircleIcon"
-      :menuItems="userItems"
-    />
+    <DropdownMenu :triggerIcon="UserCircleIcon" :menuItems="userItems" openfrom="right" />
   </nav>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 import { useRouter } from 'vue-router';
-import { Bars3Icon, HomeIcon, CalendarIcon, ChatBubbleLeftRightIcon, MagnifyingGlassIcon, UserCircleIcon, UserIcon, WrenchIcon, ArrowLeftEndOnRectangleIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/vue/24/outline';
+import { Bars3Icon, HomeIcon, CalendarIcon, ChatBubbleLeftRightIcon, UserCircleIcon, UserIcon, WrenchIcon, ArrowLeftEndOnRectangleIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/vue/24/outline';
 import DropdownMenu from './DropdownMenu.vue';
+import DropdownSearch from './DropdownSearch.vue';
 
 const router = useRouter();
 const goHome = () => router.push('/');
