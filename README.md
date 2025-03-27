@@ -9,7 +9,7 @@ The items on the list are in no particular order!
 - [x] Collapsible comments in detailed view
 - [ ] add user info modal
 - [ ] add coworker view
-- [ ] drawer for menu
+- [x] drawer for menu
 - [ ] synchronize data across pages
 - [ ] add login/logout
 - [ ] add floating new post button with few possible states (controllable from settings)
@@ -34,6 +34,10 @@ The items on the list are in no particular order!
 - [ ] add forum
 - [ ] add filter options to show posts within given timeframe
 - [ ] add pagination
+- [ ] add show online status on user image
+   - show based on teams status
+   - show based on whether user active on the site
+- [ ] maybe allow anoon comments?
 - Maybe even see more in settings?
 
 ## Recommended IDE Setup

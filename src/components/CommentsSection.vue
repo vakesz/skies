@@ -26,14 +26,8 @@
               <p class="mt-2 text-gray-700">
                 {{ comment.comment }}
               </p>
-              <div class="mt-3 flex items-center space-x-2">
-                <button @click="toggleLike(index)" class="flex items-center space-x-1 text-sm text-black transition-colors">
-                  <HeartIcon class="h-4 w-4"
-                    :class="{ 'fill-red-500': comment.commentLikedBy.includes(currentUser.userid), 'fill-none': !comment.commentLikedBy.includes(currentUser.userid) }" />
-                  <span class="leading-none">
-                    {{ comment.commentLikedBy.length }} {{ comment.commentLikedBy.length === 1 ? 'Like' : 'Likes' }}
-                  </span>
-                </button>
+              <div class="mt-2 flex items-center">
+                <LikeLine :likedBy=comment.commentLikedBy :currentUserId=currentUser.userid />
               </div>
             </div>
           </div>
@@ -65,13 +59,15 @@
 <script>
 import { ArrowRightIcon, HeartIcon } from '@heroicons/vue/24/outline';
 import ChevronDropdown from '@/components/ChevronDropdown.vue';
+import LikeLine from '@/components/LikeLine.vue';
 
 export default {
   name: 'CommentsSection',
   components: {
     ChevronDropdown,
     ArrowRightIcon,
-    HeartIcon
+    HeartIcon,
+    LikeLine
   },
   props: {
     comments: {
@@ -103,7 +99,7 @@ export default {
           comment: this.newComment.trim(),
           commentLikedBy: [],
           commentedByUserId: this.currentUser.userid,
-          commentedAt: "Just now"
+          commentedAt: new Date().toISOString()
         });
         this.newComment = "";
       }

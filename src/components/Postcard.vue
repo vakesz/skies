@@ -8,12 +8,14 @@
           <h2 @click="goToPost" class="text-2xl font-bold text-gray-900 cursor-pointer">
             {{ event.title }}
           </h2>
-          <button v-if="postType === 'event'"
-            @click.stop="showModal = true"
-            class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 cursor-pointer"
-          >
-            Sign Up
-          </button>
+          <div v-if="postType === 'event'">
+            <SignupModal 
+              :eventName="event.title" 
+              :datetime="event.date"
+              :location="event.location"
+              :attendees="event.attendees"
+            />
+          </div>
         </div>
 
         <!-- Event Meta -->
@@ -31,38 +33,15 @@
 
     <!-- Right Section -->
     <div class="w-full md:w-1/3 relative order-1 md:order-last">
-      <img
-        @click="goToPost" 
-        :src="event.image"
-        :alt="event.title"
-        class="object-cover w-full h-60 md:h-full brightness-90 cursor-pointer"
-      />
+      <img @click="goToPost" :src="event.image" :alt="event.title"
+        class="object-cover w-full h-60 md:h-full brightness-90 cursor-pointer" />
       <div class="absolute left-4 bottom-4 flex space-x-3">
-        <span
-          v-for="tag in event.tags"
-          :key="tag"
-          class="bg-black/60 text-white text-sm px-4 py-1 rounded-full shadow-md"
-        >
+        <span v-for="tag in event.tags" :key="tag"
+          class="bg-black/60 text-white text-sm px-4 py-1 rounded-full shadow-md">
           #{{ tag }}
         </span>
       </div>
     </div>
-  </div>
-
-  <!-- Modal -->
-  <div
-    v-if="showModal"
-    class="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-    @click.self="showModal = false"
-  >
-    <SignupModal
-      :show="showModal"
-      :datetime="event.date"
-      :location="event.location"
-      :attendees="event.attendees"
-      @close="showModal = false"
-      @confirm="confirmSignup"
-    />
   </div>
 </template>
 
@@ -97,7 +76,6 @@ const { postId, postType, event, users, stats } = defineProps({
 });
 
 const router = useRouter();
-const showModal = ref(false);
 
 const goToPost = () => {
   router.push({
@@ -106,10 +84,5 @@ const goToPost = () => {
       eventKey: postId  // using postId as the event key
     }
   });
-};
-
-const confirmSignup = () => {
-  alert("You have signed up!");
-  showModal.value = false;
 };
 </script>

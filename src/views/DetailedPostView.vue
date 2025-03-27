@@ -1,29 +1,31 @@
 <template>
-  <div class="container mx-auto px-4 py-8 flex flex-col items-center">
+  <div class="flex flex-col items-center justify-center mx-auto max-w-6xl w-full px-4 gap-6 my-6">
     <EventDetails 
-      :eventTitle="eventTitle"
-      :eventImage="eventImage"
-      :eventDescription="eventDescription"
-      :writtenBy="writtenBy"
-      :lastEdited="lastEdited"
-      :eventDate="eventDate"
-      :eventPlace="eventPlace"
-      :createdAt="createdAt"
+      :eventTitle="eventData.eventTitle"
+      :eventImage="eventData.eventImage"
+      :eventDescription="eventData.eventDescription"
+      :writtenBy="eventData.writtenBy"
+      :lastEdited="eventData.lastEdited"
+      :eventDate="eventData.eventDate"
+      :eventPlace="eventData.eventPlace"
+      :createdAt="eventData.createdAt"
+      :postLikedBy="eventData.postLikedBy"
+      :currentUserId="eventData.currentUser.userid"
     />
-    <AttendeesList v-if="attendees.length" :attendees="attendees" />
-    <CommentsSection :comments="comments" :currentUser="currentUser" />
+    <AttendeesList v-if="eventData.attendees.length" :attendees="eventData.attendees" />
+    <CommentsSection :comments="eventData.comments" :currentUser="eventData.currentUser" />
   </div>
 </template>
 
 <script>
-import { ref } from 'vue';
+import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import EventDetails from '@/components/EventDetails.vue';
 import AttendeesList from '@/components/AttendeesList.vue';
 import CommentsSection from '@/components/CommentsSection.vue';
 
 // TODO: Replace this with your actual data source
-import postsJson from '@/assets/posts.json'
+import postsJson from '@/assets/posts.json';
 
 export default {
   name: 'DetailedPostView',
@@ -38,29 +40,30 @@ export default {
     AttendeesList,
     CommentsSection
   },
-  data() {
-    return {
-      createdAt: '',
+  setup(props) {
+    const router = useRouter();
+    const eventData = reactive({
+      createdAt: null,
       eventTitle: '',
       eventImage: '',
       eventDescription: '',
-      eventDate: '',
+      eventDate: null,
       eventPlace: '',
       writtenBy: '',
-      lastEdited: '',
+      postLikedBy: [],
+      lastEdited: null,
       attendees: [],
       comments: [],
       currentUser: {}
-    }
-  },
-  created() {
+    });
+
     try {
-      const key = this.eventKey;
+      const key = props.eventKey;
       if (!key) {
         throw new Error('Missing eventKey in component props.');
       }
-      let eventsObject = postsJson;
 
+      const eventsObject = postsJson;
       if (!eventsObject) {
         throw new Error('No events found in the database.');
       }
@@ -70,22 +73,20 @@ export default {
         throw new Error('Event not found in the database.');
       }
 
-      this.createdAt = event.createdAt;
-      this.eventTitle = event.eventTitle;
-      this.eventImage = event.eventImage;
-      this.eventDescription = event.eventDescription;
-      this.eventDate = event.eventDate;
-      this.eventPlace = event.eventPlace;
-      this.writtenBy = event.writtenBy;
-      this.lastEdited = event.lastEdited;
-      this.attendees = event.attendees;
-      this.comments = event.comments;
-      this.currentUser = event.currentUser;
+      // Convert date strings to Date objects
+      event.eventDate = new Date(event.eventDate);
+      event.lastEdited = new Date(event.lastEdited);
+      event.createdAt = new Date(event.createdAt);
+
+      Object.assign(eventData, event);
     } catch (error) {
-      console.error('Error in DetailedPostView created hook:', error);
-      const router = useRouter();
+      console.error('Error in DetailedPostView setup:', error);
       router.push('/not-found');
     }
+
+    return {
+      eventData
+    };
   }
-}
+};
 </script>

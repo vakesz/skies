@@ -25,14 +25,17 @@
       </div>
 
       <!-- Time and Location -->
-      <div class="mt-4 space-y-1 text-gray-500 text-sm">
+      <div class="mt-4 space-y-2 text-gray-500 text-sm">
         <p class="flex items-center gap-2">
-          <CalendarIcon class="w-4 h-4" />
+          <CalendarIcon class="w-5 h-5" />
           {{ formatDate(eventDate) }}
-          <ClockIcon class="w-4 h-4" />
+          <ClockIcon class="w-5 h-5" />
           {{ formatTime(eventDate) }}
-          <MapPinIcon class="w-4 h-4" />
+          <MapPinIcon class="w-5 h-5" />
           {{ eventPlace }}
+        </p>
+        <p class="text-sm mt-4 left-0">
+          <LikeLine :likedBy=postLikedBy :currentUserId=currentUserId />
         </p>
       </div>
     </div>
@@ -41,6 +44,7 @@
 
 <script setup>
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/vue/24/outline';
+import LikeLine from '@/components/LikeLine.vue';
 
 defineProps({
   eventTitle: { type: String, required: true },
@@ -48,9 +52,11 @@ defineProps({
   eventDescription: { type: String, required: true },
   writtenBy: { type: String, required: true },
   lastEdited: { type: String, required: true },
-  eventDate: { type: Date, required: true },
+  eventDate: { type: String, required: true },
   eventPlace: { type: String, required: true },
-  createdAt: { type: Date, required: true }
+  createdAt: { type: String, required: true },
+  postLikedBy: { type: Array, required: true },
+  currentUserId: { type: String, required: true }
 });
 
 const formatDate = (date) =>

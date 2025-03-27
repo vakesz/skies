@@ -4,12 +4,12 @@
     "eventTitle": "GitHub Galaxy Keynote 2025",
     "eventImage": "https://github.blog/wp-content/uploads/2023/03/1200x627_LinkedIn-Header-1.png?resize=1600%2C850",
     "eventDescription": "Join us for the first event at GitHub Galaxy, a special keynote from GitHub leadership. Tune in to hear from GitHub CEO, Thomas Dohmke, GitHub Chief Product Officer, Inbal Shani, and other product leaders to learn how GitHub provides a world class, AI-powered, secure, and fully integrated developer experience for the largest businesses, teams, startups, and individuals alike to drive innovation at scale. Streaming live here on LinkedIn. We'll also have three days of fireside chats and forums from March 29-31. Learn more and register now at galaxy.github.com.",
-    "eventDate": "2025-03-23T18:30:00",
+    "eventDate": "2025-03-23T19:00:00+00:00",
     "eventPlace": "Whistler, BC",
-    "createdAt": "2025-03-23T08:00:00Z",
+    "createdAt": "2025-02-01T19:00:00+00:00",
     "writtenBy": "GitHub",
-    "lastEdited": "2025-03-23T08:00:00Z",
-    "postLikedBy": ["202"],
+    "lastEdited": "2025-02-15T19:00:00+00:00",
+    "postLikedBy": ["201"],
     "eventTags": ["GitHub", "AI", "Keynote"],
     "currentUser": {
       "userid": "201",
@@ -29,7 +29,7 @@
         "comment": "I'm excited to see the new UI!",
         "commentLikedBy": ["201", "203"],
         "commentedByUserId": "202",
-        "commentedAt": "2025-03-23T08:00:00Z"
+        "commentedAt": "2025-02-20T19:00:00+00:00"
       },
       {
         "userid": 202,
@@ -39,17 +39,17 @@
         "comment": "I can't wait to see the new UI!",
         "commentLikedBy": [],
         "commentedByUserId": "202",
-        "commentedAt": "2025-03-23T08:00:00Z"
+        "commentedAt": "2025-03-01T19:05:00+00:00"
       },
       {
         "userid": 203,
-        "firstName": "David",
-        "lastName": "Miller",
+        "firstName": "Bill",
+        "lastName": "Gates",
         "profileImage": "https://randomuser.me/api/portraits/men/1.jpg",
         "comment": "YOOOO wassup homies?",
         "commentLikedBy": ["202", "203", "204", "205"],
         "commentedByUserId": "203",
-        "commentedAt": "2025-03-23T08:00:00Z"
+        "commentedAt": "2025-03-10T11:30:00+00:00"
       }
     ]
   },
@@ -58,12 +58,12 @@
     "eventTitle": "Beerparty: The Future of Crypto 2025",
     "eventImage": "https://static.independent.co.uk/2023/06/13/22/newFile-1.jpg?width=1200&auto=webp&quality=75",
     "eventDescription": "Join us for an exciting BeerParty, where we mix great drinks with even greater conversations! Whether you're into crypto, finance, or just looking to have a good time, this is the place to be. Let's talk money, investments, and the future of digital assets—all while enjoying an amazing vibe.\n\nBut that's not all! As the night goes on, things get even wilder with events like a Wet T-Shirt Contest, a Beer Pong Championship, and the legendary Drunken Debate, where the most absurd financial theories battle it out. Will Bitcoin replace governments? Is Dogecoin secretly controlled by aliens? Grab a drink and argue your case!\n\nExpect good laughs, great drinks, and unforgettable moments. Come thirsty and leave… well, however the night takes you! 🍻🔥",
-    "eventDate": "Apr 1, 2025",
+    "eventDate": "2025-04-01T19:00:00+00:00",
     "eventTime": "6:00 PM - 12:00 PM",
     "eventPlace": "Budapest, HU",
-    "createdAt": "2025-03-23T08:00:00Z",
+    "createdAt": "2025-03-01T19:00:00+00:00",
     "writtenBy": "Gergő Kovács",
-    "lastEdited": "2025-03-20",
+    "lastEdited": "2025-03-10T19:00:00+00:00",
     "postLikedBy": ["102", "103", "104", "105", "106", "102", "102", "102", "103", "104", "105", "106", "102", "102", "102", "103", "104", "105", "106", "102", "102", "102"],
     "eventTags": ["Memes", "Beers", "Crypto"],
     "currentUser": {
@@ -111,7 +111,7 @@
         "comment": "Alig várom már! :D",
         "commentLikedBy": ["202", "203"],
         "commentedByUserId": "204",
-        "commentedAt": "2025-03-23T08:00:00Z"
+        "commentedAt": "2025-03-26T19:00:00+00:00"
       },
       {
         "userid": 205,
@@ -121,7 +121,7 @@
         "comment": "Úristen VERYBIG!",
         "commentLikedBy": ["102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102", "102"],
         "commentedByUserId": "205",
-        "commentedAt": "2025-03-23T08:00:00Z"
+        "commentedAt": "2025-03-27T19:00:00+00:00"
       }
     ]
   },
@@ -133,9 +133,9 @@
     "eventDate": "March 20, 2025",
     "eventTime": "6:30 PM - 8:00 PM",
     "eventPlace": "New York, NY",
-    "createdAt": "2025-03-23T08:00:00Z",
+    "createdAt": "2025-03-23T19:00:00+00:00",
     "writtenBy": "John Smith",
-    "lastEdited": "2025-03-20",
+    "lastEdited": "2025-03-26T19:00:00+00:00",
     "postLikedBy": ["202", "203", "204", "205", "206"],
     "eventTags": ["JetBrains", "UI", "Webinar"],
     "currentUser": {
@@ -156,7 +156,7 @@
         "comment": "This update looks promising!",
         "commentLikedBy": ["202", "203"],
         "commentedByUserId": "203",
-        "commentedAt": "2025-03-23T08:00:00Z"
+        "commentedAt": "2025-03-26T19:00:00+00:00"
       }
     ]
   }
