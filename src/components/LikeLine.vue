@@ -29,7 +29,7 @@ const props = defineProps({
     required: true,
   },
   currentUserId: {
-    type: String,
+    type: Number,
     required: true,
   },
   showText: {

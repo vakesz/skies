@@ -43,15 +43,15 @@ export default {
   setup(props) {
     const router = useRouter();
     const eventData = reactive({
-      createdAt: null,
+      createdAt: {type: Date, default: null},
       eventTitle: '',
       eventImage: '',
       eventDescription: '',
-      eventDate: null,
+      eventDate: {type: Date, default: null},
       eventPlace: '',
       writtenBy: '',
       postLikedBy: [],
-      lastEdited: null,
+      lastEdited: {type: Date, default: null},
       attendees: [],
       comments: [],
       currentUser: {}
@@ -72,11 +72,6 @@ export default {
       if (!event) {
         throw new Error('Event not found in the database.');
       }
-
-      // Convert date strings to Date objects
-      event.eventDate = new Date(event.eventDate);
-      event.lastEdited = new Date(event.lastEdited);
-      event.createdAt = new Date(event.createdAt);
 
       Object.assign(eventData, event);
     } catch (error) {

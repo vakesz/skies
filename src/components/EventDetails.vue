@@ -56,7 +56,7 @@ defineProps({
   eventPlace: { type: String, required: true },
   createdAt: { type: String, required: true },
   postLikedBy: { type: Array, required: true },
-  currentUserId: { type: String, required: true }
+  currentUserId: { type: Number, required: true }
 });
 
 const formatDate = (date) =>

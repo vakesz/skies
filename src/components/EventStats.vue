@@ -1,6 +1,6 @@
 <template>
   <div class="mt-6 flex items-center gap-6 text-sm text-gray-500">
-    <div class="flex items-center gap-2">
+    <div v-if="stats.likes" class="flex items-center gap-2">
       <HeartIcon class="w-4 h-4" />
       {{ stats.likes }}
     </div>
@@ -8,7 +8,7 @@
       <UserIcon class="w-4 h-4" />
       {{ stats.going }}
     </div>
-    <div class="flex items-center gap-2">
+    <div v-if="stats.comments" class="flex items-center gap-2">
       <ChatBubbleBottomCenterIcon class="w-4 h-4" />
       {{ stats.comments }}
     </div>
@@ -21,10 +21,7 @@ import { ChatBubbleBottomCenterIcon, UserIcon, HeartIcon } from '@heroicons/vue/
 defineProps({
   stats: {
     type: Object,
-    required: true,
-    validator: (value) => {
-      return ['likes', 'going', 'comments'].every(key => key in value)
-    }
+    required: true
   }
 });
 </script>

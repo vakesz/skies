@@ -58,11 +58,13 @@ export default {
     }
   },
   computed: {
+    // Display only the first 10 attendees in the list
+    // and show the rest in a hoverable list
     displayedAttendees() {
       return this.attendees.slice(0, 10);
     },
     extraAttendeesCount() {
-      return Math.max(0, this.attendees.length - 5);
+      return Math.max(0, this.attendees.length - 10);
     }
   },
   methods: {
